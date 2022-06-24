@@ -21,7 +21,7 @@ header {
 #preview {
   width: 1440px;
   height: 765px;
-  background: url("./images/main_bg.png") no-repeat;
+  background: url("./images/main_bg.jpg") no-repeat;
 }
 
 #nav {
@@ -42,18 +42,20 @@ header {
   font-weight: 400;
 }
 
-.Red_Hat_Tex_Medium {
+.Red_Hat_Text_Medium {
   font-family: 'Red Hat Text';
   font-weight: 500;
 }
 
+
+.Aleo_Regular {
+  font-weight: 400;
+}
 .Aleo_Bold {
-  font-family: 'Aleo';
   font-weight: 700;
 }
 
 .Aleo_Bold_italic {
-  font-family: 'Aleo';
   font-style: italic;
   font-weight: 700;
   font-size: 20px;
@@ -61,10 +63,14 @@ header {
 }
 
 .Aleo_italic {
-  font-family: 'Aleo';
   font-style: italic;
   font-weight: 400;
 }
+
+.Aleo_Regular, .Aleo_Bold, .Aleo_italic, .Aleo_Bold_italic {
+  font-family: 'Aleo';
+}
+
 
 .titles_font {
   font-family: Red Hat Text;
@@ -153,4 +159,53 @@ header {
   right: 18px;
   font-size: 24px;
   line-height: 32px;
+}
+
+#steps {
+  width: 1177px;
+  height: 247px;
+  margin: 80px auto 97px;
+}
+
+.section_title {
+  height: 53px;
+  font-size: 40px;
+  line-height: 53px;
+  color: #F2785C;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.container {
+    display: flex;
+}
+
+#steps_container {
+  justify-content: space-around;
+  width: 1177px;
+  height: 154px;
+  margin-top: 40px; 
+}
+
+
+.steps_item {
+  font-size: 20px;
+  line-height: 24px;
+  color: #0D606F;
+}
+
+.steps_icon {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 16px;
+  background-color: #F2785C;
+  margin: 0px auto 30px;
+}
+
+.steps_logo {
+  height: 45px;
+  width: 50px;
+  margin: auto;
 }
