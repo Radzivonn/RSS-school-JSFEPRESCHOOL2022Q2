@@ -16,8 +16,13 @@ header {
   right: 0;
   height: 90px;
   background-color: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
   z-index: 1000;
   margin: auto;
+}
+
+h1, h2, h3, p {
+  margin: 0px;
 }
 
 #preview {
@@ -71,22 +76,12 @@ header {
   font-family: 'Aleo';
 }
 
-
-.titles_font {
-  font-family: Red Hat Text;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 53px;
-  color: #F2785C;
-}
-
 #travel_logo {
   position: absolute;
   top: 25px;
   left: 120px;
   width: 216px;
   height: 31px;
-  /* margin: 25px 0 0 120px; */
 }
 
 #logo {
@@ -108,7 +103,7 @@ header {
 
 
 .button {
-  background: #0D606F;
+  background-color: #0D606F;
   box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   color: white;
@@ -133,21 +128,6 @@ header {
   height: 59px;
   top: 18px;
   right: 18px;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-#FindMore_button {
-  position: absolute;
-  height: 59px;
-  width: 228px;
-  left: 1140px;
-  top: 980px;
-
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
   font-size: 24px;
   line-height: 32px;
 }
@@ -234,7 +214,6 @@ header {
   width: 2520px;
   left: -540px;
   top: 1189px;
-
 }
 
 #destinations_container {
@@ -246,7 +225,6 @@ header {
   align-items: flex-start;
   padding: 0px;
   gap: 60px;
-
 }
 
 .destinations_photo {
@@ -293,4 +271,105 @@ header {
 
   flex: none;
   flex-grow: 0;
+}
+
+#bg_image {
+  position: absolute;
+  height: 1331px;
+  width: 1442px;
+  left: 0px;
+  top: 2404px;
+  background: url("./images/stories_bg.jpg");
+  margin: 0px auto;
+}
+
+#stories_bg {
+  position: absolute;
+  width: 1445px;
+  height: 1270px;
+  left: 0px;
+  bottom: 61px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+#stories {
+  position: absolute;
+  width: 1201px;
+  height: 1322px;
+  left: 119px;
+  bottom: 41px;
+}
+
+#stories_container {
+  position: absolute;
+  top: 93px;
+  width: 1200px;
+  height: 1090px;
+  
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0px;
+}
+
+.story {
+  width: 1200px;
+  height: 250px;
+  gap: 40px;
+}
+
+.story_image {
+  /* position: absolute;
+  left: 120px;
+  top: 2444px; */
+  width: 400px;
+  height: 250px;
+
+  filter: drop-shadow(0px 4px 4px #0D606F);
+  border-radius: 16px;
+}
+
+.stories_text {
+  width: 760px;
+  height: 250px;
+  color: #0D606F;
+}
+
+.story_title {
+  /* position: absolute;
+  left: 560px;
+  top: 2444px; */
+  width: 760px;
+  height: 42px;
+
+  font-size: 35px;
+  line-height: 42px;
+  margin-bottom: 24px;
+}
+
+.story_description {
+  font-size: 20px;
+  line-height: 24px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.story_description a:hover {
+  text-decoration: none;
+}
+
+.story_description a:visited {
+  color: #0D606F;
+}
+
+.arrow_button {
+  position: absolute;
+  height: 59px;
+  width: 228px;
+
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 24px;
+  line-height: 32px;
 }
