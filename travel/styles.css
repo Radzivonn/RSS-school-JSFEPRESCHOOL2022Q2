@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   position: relative;
   width: 1440px;
@@ -116,6 +120,16 @@ h1, h2, h3, p {
   padding: 0px;
 }
 
+.button:active {
+  animation: buttons_animation 300ms ease-in;
+}
+
+.nav_links:hover, .button:hover {
+  cursor: pointer;
+  color: wheat;
+}
+
+
 #login_button {
   position: absolute;
   top: 25px;
@@ -125,6 +139,30 @@ h1, h2, h3, p {
   font-size: 16px;
   line-height: 21px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+#login_button:active {
+  animation: Login_button_animation 300ms ease-in;
+}
+
+@keyframes buttons_animation {
+  0% {
+    box-shadow: 0px 0px 3px 0px rgba(13, 96, 111, 0.08);
+  }
+  
+  100% {
+    box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16);
+  }
+}
+
+@keyframes Login_button_animation {
+  0% {
+    box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16);
+  }
+
+  100% {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
 }
 
 #start_planning_button {
@@ -284,7 +322,7 @@ h1, h2, h3, p {
   width: 1442px;
   left: 0px;
   top: 2404px;
-  background: url("./images/stories_bg.jpg");
+  background: url("./images/Story_images/stories_bg.jpg");
   margin: 0px auto;
 }
 
