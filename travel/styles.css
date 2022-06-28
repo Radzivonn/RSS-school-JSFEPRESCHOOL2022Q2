@@ -1,7 +1,7 @@
 body{
   position: relative;
   width: 1440px;
-  /* height: 3735px; */
+  height: 3735px;
   font-style: normal;
   background-color: white;
   color:white;
@@ -35,17 +35,22 @@ h1, h2, h3, p {
   position: absolute;
   top: 35px;
   left: 494px;
-  display: inline-flex;
-	justify-content: space-between;
   width: 527px;
   height: 21px;
+
+  display: inline-flex;
+	justify-content: space-between;
+  gap: 42px;
   color: white;
 }
 
+
 .nav_links {
   height: 21px;
-  flex: none;
-  flex-grow: 0;
+  font-weight: 400;
+
+  color: white;
+  text-decoration: none;
 }
 
 .Red_Hat_Text_Medium {
@@ -319,9 +324,6 @@ h1, h2, h3, p {
 }
 
 .story_image {
-  /* position: absolute;
-  left: 120px;
-  top: 2444px; */
   width: 400px;
   height: 250px;
 
@@ -336,9 +338,6 @@ h1, h2, h3, p {
 }
 
 .story_title {
-  /* position: absolute;
-  left: 560px;
-  top: 2444px; */
   width: 760px;
   height: 42px;
 
@@ -372,4 +371,30 @@ h1, h2, h3, p {
 
   font-size: 24px;
   line-height: 32px;
+}
+
+footer {
+  position: absolute;
+  width: 729px;
+  height: 34px;
+  left: 590px;
+  top: 3688px;
+}
+
+#footer_data {  
+  width: 260px;
+  height: 21px;
+
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 7px;
+}
+
+#social_media {
+  position: absolute;
+  width: 141px;
+  height: 34px;
+  left: 588px;
+  top: 0px;
+  gap: 20px;
 }
