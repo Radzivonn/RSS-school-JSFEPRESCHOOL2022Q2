@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+
+  <script src="index.js"></script>
+
+  <!-- add favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+  <!-- include fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- include CSS file -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title> Travel </title>
+</head>
+
+<body>
+  <header>
+      <div id="travel_logo">
+        <img id="logo" src="./images/header-logo.svg" alt="logo" />
+        <h3 id="header_title"> Travel Portal </h3>
+      </div>
+      <nav class="Red_Hat_Text_Medium" id="navigation">
+        <a class="nav_links" style="width: 98px" href="#steps_anchor"> How It Works </a>
+        <a class="nav_links" style="width: 105px"> Plan Your Trip </a>
+        <a class="nav_links" style="width: 95px" href="#destinations_anchor"> Destinations </a>
+        <a class="nav_links" style="width: 103px" href="#stories_anchor"> Travel Stories </a>
+      </nav>
+      <button class="button Red_Hat_Text_Medium" id="login_button"> Login </button>
+  </header>
+
+  <main>
+    <!-- section-preview -->
+    <section id="preview">
+      <div id="plan_your_trip">
+        <h1 class="Aleo_Bold" id="preview_title"> Explore the beauty of the World </h1>
+        <p class="Aleo_Bold_italic" style="margin-top: 30px"> Receive personalized recommendations for countries, hotels, activities and more </p>
+      </div>
+      <div id="search">
+        <p class="Aleo_italic" style="margin: 32px 0 0 41px"> What would you like to do? </p>
+        <button class="button Red_Hat_Text_Medium" id="start_planning_button"> Start Planning </button>
+      </div>
+    </section>
+
+    <!-- section-steps -->
+    <section id="steps">
+      <a id="steps_anchor"></a>
+      <h2 class="section_title Red_Hat_Text_Medium"> 3 STEPS TO THE PERFECT TRIP </h2>
+      <div class="container" id="steps_container">
+        <div class="steps_item">
+          <div class="steps_icon container">
+            <img class="steps_logo" src="./images/Steps_images/Vector.svg" alt="Steps_logo">
+          </div>
+          <p class="Aleo_Regular"> Tell us what you want to do </p>
+        </div>
+        <div class="steps_item">
+          <div class="steps_icon container">
+            <img class="steps_logo" src="./images/Steps_images/Vector2.svg" alt="Steps_logo">
+          </div>
+          <p class="Aleo_Regular"> Tell us what you want to do </p>
+        </div> 
+        <div class="steps_item">
+          <div class="steps_icon container">
+            <img class="steps_logo" src="./images/Steps_images/Vector3.svg" alt="Steps_logo">
+          </div>
+          <p class="Aleo_Regular"> We will give you recommendations </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-destinations -->
+    <section id="destinations">
+      <a id="destinations_anchor"></a>
+      <h2 class="section_title Red_Hat_Text_Medium"> POPULAR DESTINATIONS </h2>
+      <div class="container" id="destinations_container">
+        <img class="destinations_photo" id="Spain" src="./images/destinations_images/Spain.jpg" alt="Spain">
+        <img class="destinations_photo" id="Japan" src="./images/destinations_images/Japan.jpg" alt="Japan">
+        <img class="destinations_photo" id="USA" src="./images/destinations_images/USA.jpg" alt="USA">
+      </div>
+
+      <div class="container" id="scroll_circles">
+        <svg class="scroll_circle" style="order: 0">
+          <circle cx="10" cy="10" r="10" fill="rgba(242, 120, 92, 0.5)" />
+        </svg>
+        <svg class="scroll_circle" style="order: 1">
+          <circle cx="10" cy="10" r="10" fill="#F2785C" />
+        </svg>
+        <svg class="scroll_circle" style="order: 2">
+          <circle cx="10" cy="10" r="10" fill="rgba(242, 120, 92, 0.5)" />
+        </svg>
+      </div>
+
+      <button class="button container arrow_button Red_Hat_Text_Medium" style="left: 1140px; top: 980px">
+        <img src="./images/destinations_images/Vector.svg" alt="vector">
+        Find More
+      </button>
+    </section>
+
+    <!-- section-stories -->
+    <div id="bg_image">
+      <div id="stories_bg">
+        <section id="stories">
+          <a id="stories_anchor"></a>
+          <h2 class="section_title Red_Hat_Text_Medium"> TRAVEL STORIES </h2>
+          <div class="container" id="stories_container">
+
+            <div class="story container"> 
+              <img class="story_image" src="./images/Story_images/photo1.jpg" alt="story_image">
+              <div class="stories_text Aleo_Regular"> 
+                <h3 class="story_title"> 10 Photos of Attractive Thailand </h3>
+                <p class="story_description"> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                  <a class="Aleo_Bold" href="#"> Read More </a> 
+                </p>
+              </div>
+            </div>
+ 
+            <div class="story container"> 
+              <img class="story_image" src="./images/Story_images/photo2.jpg" alt="story_image">
+              <div class="stories_text Aleo_Regular"> 
+                <h3 class="story_title"> Canyonlands National Park, Utah </h3>
+                <p class="story_description"> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                  <a class="Aleo_Bold" href="#"> Read More </a> 
+                </p>
+              </div>
+            </div>
+
+            <div class="story container">
+              <img class="story_image" src="./images/Story_images/photo3.jpg" alt="story_image">
+              <div class="stories_text Aleo_Regular"> 
+                <h3 class="story_title"> I left my heart in the Mountains! </h3>
+                <p class="story_description"> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                  <a class="Aleo_Bold" href="#"> Read More </a> 
+                </p>
+              </div>
+            </div>
+
+            <div class="story container">
+              <img class="story_image" src="./images/Story_images/photo4.jpg" alt="story_image">
+              <div class="stories_text Aleo_Regular"> 
+                <h3 class="story_title"> The Longest journey in my life! </h3>
+                <p class="story_description"> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                  <a class="Aleo_Bold" href="#"> Read More </a> 
+                </p>
+              </div>
+            </div> 
+          </div>
+          <button class="button container arrow_button Red_Hat_Text_Medium" style="left: 489px; bottom: 0px">
+            <img src="./images/destinations_images/Vector.svg" alt="vector">
+            See More
+          </button>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <h3 class="Red_Hat_Text_Medium" id="footer_data"> All Rights Reserved © Travel Portal </h3>
+    <div class="container" id="social_media">
+      <a href="https://www.instagram.com/rs.school/?hl=ru"> <img src="./images/social_media/instagram_icon.svg" alt="instagram_icon"> </a>
+      <a href="https://rs.school/js-stage0/"> <img src="./images/social_media/video_icon.svg" alt="video_icon"> </a>
+      <a href="https://github.com/Radzivonn"> <img src="./images/social_media/GitHub_icon.svg" alt="GitHub_icon"> </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
