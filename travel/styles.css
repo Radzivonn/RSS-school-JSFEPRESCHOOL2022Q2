@@ -9,7 +9,7 @@ body{
   font-style: normal;
   background-color: white;
   color:white;
-  margin: auto;
+  margin: auto; 
 }
 
 header {
@@ -27,6 +27,11 @@ header {
 
 h1, h2, h3, p {
   margin: 0px;
+}
+
+main {
+  width: 1440px;
+  height: 3611px;
 }
 
 #preview {
@@ -254,20 +259,22 @@ h1, h2, h3, p {
 #destinations {
   position: absolute;
   height: 1042px;
-  width: 2520px;
-  left: -540px;
+  width: 1440px;
+  left: 0px;
   top: 1189px;
 }
 
 #destinations_container {
   position: absolute;
-  width: 100%;
+  width: 1440px;
   height: 800px;
   top: 99px;
 
   align-items: flex-start;
   padding: 0px;
   gap: 60px;
+
+  overflow: hidden;
 }
 
 .destinations_photo {
@@ -281,25 +288,52 @@ h1, h2, h3, p {
 }
 
 #Spain {
-  left: 0px;
+  left: -540px;
   order: 0;
 }
 
+#Spain_text {
+  position: absolute;
+  height: 42px;
+  width: 95px;
+}
+
 #Japan {
-  left: 860px;
+  left: 320px;
   order: 1;
 }
 
+#Japan_text {
+  position: absolute;
+  height: 42px;
+  width: 108px;
+}
+
 #USA {
-  left: 1720px;
+  left: 1180px;
   order: 2;
 }
+
+#USA_text {
+  position: absolute;
+  height: 42px;
+  width: 66px;
+}
+
+#Spain_text, #Japan_text, #USA_text {
+  position: absolute;
+  left: 15px;
+  bottom: 40px;
+  font-size: 32px;
+  line-height: 42px;
+}
+
 
 #scroll_circles {
   position: absolute;
   width: 80px;
   height: 20px;
-  left: 1210px;
+  left: 670px;
   top: 920px;
 
   align-items: flex-start;
