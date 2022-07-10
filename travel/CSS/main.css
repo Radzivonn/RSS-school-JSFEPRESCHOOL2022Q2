@@ -1,0 +1,52 @@
+@import url("fonts.css");
+@import url("header_styles.css");
+@import url("section_main.css");
+@import url("media.css");
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  /* position: relative; */
+  max-width: 1440px;
+  /* height: 100%; */
+  font-style: normal;
+  background-color: white;
+  color:white;
+  margin: auto; 
+}
+
+body._lock { overflow: hidden }
+
+h1, h2, h3, p {
+  margin: 0px;
+}
+
+main {
+  max-width: 1440px;
+  height: 3611px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.section_title {
+  color: #F2785C;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+._container {
+  max-width: 1200px;
+  margin: 0px auto;
+}

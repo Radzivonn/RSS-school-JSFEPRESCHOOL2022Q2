@@ -1,0 +1,481 @@
+ @media (max-width: 390px) {
+  body {
+    max-width: 390px;
+  }
+
+  main {
+    max-width: 390px;
+  }
+
+  .wrapper {
+    border-radius: 30px;
+  }
+
+  #preview_bg {
+    height: 251px;
+    background: url("../images/main_bg_mobile.jpg") no-repeat; 
+  }
+  
+  .header {
+    height: 41.1px;
+    width: 390px;
+    padding-top: 43.5px;
+  }
+
+  #header__container {
+    width: 91.8%;
+    height: 32px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #travel_logo {
+    width: 29px;
+    height: 30px;
+    display: block;
+  }
+
+  .menu__icon {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 35px;
+    height: 32px;
+    cursor: pointer;
+
+  }
+
+  .menu__icon span,
+  .menu__icon::after,
+  .menu__icon::before {
+    left: 0;
+    position: absolute;
+    height: 3px;
+    width: 26.25px;
+    transition: all 0.3s ease 0s;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+  .menu__icon::after,
+  .menu__icon::before {
+    content: "";
+  }
+
+  .menu__icon::before { top: 7px;}
+  .menu__icon::after {
+    bottom: 9px;
+    height: 2.67px;
+  }
+  .menu__icon span {
+    top: 48%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  #navigation {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    z-index: -1;
+
+    height: 250px;
+    width: 165px;
+
+    transform: translate(100%, 21.9%);
+    transition: all 300ms ease-in 0s;
+
+    background-color: rgba(242, 120, 92, 1); 
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    border-radius: 10px; 
+  }
+
+  #navigation._active {
+    /* filter: brightness(101%); */
+    z-index: 10;
+    transform: translate(-68.5%, 21.9%);
+  }
+
+
+  #nav_menu {
+    height: 176px;
+    width: 106px; 
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: normal;
+    margin: 0px 15px 30px 44px;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .close_window_cross { display: block }
+   
+  .hidden_links { 
+    display: list-item;
+    list-style: none;
+   }
+
+  #preview_bg_img, #travel_logo h3, 
+  #login_button, #plan_your_trip h1, p.Aleo_Bold_italic{
+    display: none;
+  }
+
+/*------------------------------------------*/
+
+  #section_preview {
+    width: 360px;
+    height: 48px;
+    margin: 57.9px auto 0 ; 
+  }
+
+  #plan_your_trip {
+    width: 100%;
+    height: 100%;
+  }
+
+  #search{ margin: 0}
+
+  #search p {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 16px 0 21px 17px;
+    height: 11px;
+  }
+
+  #start_planning_button { 
+    width: 92px;
+    height: 30px; 
+    font-size: 11px;
+    line-height: 15px;
+    margin: 9px 9px 9px 0;
+  }  
+
+}
+
+/*============================================================*/
+
+@media (min-width: 391px) and (max-width: 479px) {
+  #preview_bg_img, #preview_bg  {
+    height: 465px; 
+  }
+
+  #header__container { padding: 24px 10px 25px}
+
+  #navigation { 
+    max-width: 100px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .list_item { font-size: 12px; } 
+
+  #travel_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-bottom: 30px;
+  }
+  
+  #header_title{ font-size: 16px;}
+
+  #login_button { 
+    width: 80px;
+    font-size: 15px;
+  }
+
+  #section_preview  {
+    margin: 15px 0 0 40px;
+  }
+ 
+  #preview_title { 
+    font-size: 40px; 
+    line-height: 48px;
+  }
+
+  #plan_your_trip {
+    height: 300px;
+    display: block;
+  }
+
+  #plan_your_trip p, #search { 
+    margin-top: 15px;
+  } 
+
+  .Aleo_Bold_italic{ 
+    font-size: 14px;
+   }
+
+  #search { 
+    max-width: 392px;
+    height: 48px;
+  }
+
+  #search p{
+    margin: 0 auto; 
+    font-size: 17px;
+  }
+
+  #start_planning_button { 
+    width: 110px;
+    height: 30px; 
+    font-size: 14px;
+    margin: 9px 9px 9px 0;
+  }
+
+/*------------------------------------------*/
+
+} 
+
+/*============================================================*/
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  #preview_bg_img, #preview_bg  {
+    height: 465px; 
+  }
+
+  #header__container { 
+    width: inherit;
+    /* height: 11px; */
+    padding: 24px 40px 25px 
+  }
+  
+  #section_preview  {
+    margin: 18px 0 0 50px;
+  }
+
+  #navigation { 
+    max-width: 110px;
+    height: 80px;
+  }
+
+  .list_item { font-size: 12px; }
+
+  #header_title { font-size: 22px; }
+
+
+  #preview_title { 
+    font-size: 40px; 
+    line-height: 48px;
+  }
+
+  .Aleo_Bold_italic{ 
+    font-size: 16px;
+   }
+
+  #search { 
+    max-width: 492px;
+    height: 55px;
+    margin: 23px 0 0 0;
+  }
+
+  #search p{
+    margin: 0 auto; 
+    font-size: 19px;
+  }
+
+  #start_planning_button { 
+    width: 140px;
+    font-size: 16px;
+    margin: 9px 9px 9px 0;
+  }      
+  
+/*------------------------------------------*/
+
+  .section_title {
+    height: 30px;
+    font-size: 28px;
+  }
+
+  #steps_text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+/*============================================================*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* header { padding: 24px 4% 25px; } */
+
+  #preview_bg_img, #preview_bg {
+    height: 565px; 
+  }
+
+  #header__container { padding: 24px 50px 25px }
+
+  #header_title { 
+    font-size: 24px;
+  }
+
+  #navigation { 
+    padding-right: 20px;
+  }
+
+  .list_item{ font-size: 14px; }
+
+  .Aleo_Bold_italic{ font-size: 18px; }
+
+  #section_preview { 
+    max-width: 768px;
+    margin: 22px 0 0 80px; 
+  }
+
+  #preview_title { font-size: 60px; }
+
+  #search { 
+    max-width: 692px;
+    height: 70px;
+    font-size: 22px;
+  }
+
+  #start_planning_button { 
+    width: 170px;
+    font-size: 20px;
+  }  
+
+  /*------------------------------------------*/
+
+  .section_title {
+    height: 40px;
+    font-size: 32px;
+  }
+
+  #steps_text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+ 
+}
+
+/*============================================================*/
+
+@media (min-width: 480px) and (max-width: 991px) {
+  #travel_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin-bottom: 30px;
+  }
+
+  #header_title { font-size: 20px; }
+
+  #login_button { 
+    width: 80px;
+    font-size: 15px;
+  }
+
+  /*------------------------------------------*/
+  
+  .steps_icon {
+    height: 85px;
+    width: 85px;
+  }
+  
+  .steps_logo {
+    height: 40px;
+    width: 45px;
+  }
+}
+
+/*============================================================*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  #header__container { 
+    width: inherit;
+    /* height: 11px; */
+    padding: 24px 80px 25px 
+  }
+
+  #header_title { font-size: 26px; }
+
+  #navigation { width: 480px; }
+
+  .nav_links { font-size: 14px; }
+
+  .Aleo_Bold_italic{ font-size: 18px; }
+
+  #preview_title { font-size: 70px; }
+
+  #search { 
+    max-width: 792px; 
+  }
+
+  #start_planning_button { 
+    width: 200px;
+    font-size: 22px;
+  }  
+}
+
+/*============================================================*/
+
+@media (max-width: 480px){
+  .section_title {
+    height: 19px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #steps_container {
+    justify-content: space-between;
+    max-width: 360px;
+    margin-top: 19px;
+    padding: 0;
+  }
+
+  #steps_text {
+    max-width: 360px;
+    gap: 28.5px;
+    height: 24px;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 19px;
+  }
+
+  .steps_icon {
+    height: 70px;
+    width: 70px;
+  }
+
+  .steps_logo{
+    height: 31.5px;
+    width: 35px;
+  }
+
+}
+
+/*============================================================*/
+
+@media (min-width: 992px){
+  .section_title {
+    height: 53px;
+    font-size: 40px;
+  }
+
+  .steps_icon{
+    width: 100px;
+    height: 100px;
+  }
+
+  .steps_logo {
+    height: 45px;
+    width: 50px;
+  }
+  
+  #steps_text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+/*============================================================*/
+
+@media (min-width: 1200px) {
+  #preview_title { font-size: 80px; }
+
+  #search { max-width: 892px; }
+
+  #steps { margin: 5.55% auto 6.74%; }
+
+}

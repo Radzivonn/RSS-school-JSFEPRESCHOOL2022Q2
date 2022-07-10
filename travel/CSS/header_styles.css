@@ -1,0 +1,79 @@
+.header {
+  max-width: 100%;
+  height: 90px;
+
+  background-color: rgba(242, 120, 92, 0.7);
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+  z-index: 1000;
+  margin: auto;
+}
+
+#header__container {
+  width: inherit;
+  height: 41px;
+  padding: 24px 120px 25px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navigation {
+  width: 527px;
+  height: 21px;
+  color: white;
+  line-height: calc(21 / 16 * 100%);
+}
+
+.nav_link {
+  color: white;
+  text-decoration: none;
+}
+
+#travel_logo {
+  max-width: 216px;
+  height: 31px;
+}
+
+#logo {
+  display: inline;
+}
+
+#header_title {
+  display: inline;
+  width: 180px;
+  height: 31px;
+  font-family: 'Magra';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: white;
+  text-align: center;
+}
+
+#login_button {
+  width: 103px;
+  height: 41px;
+  font-size: 16px;
+  line-height: 21px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+#login_button:active {
+  animation: Login_button_animation 300ms ease-in;
+}
+
+.menu__icon {
+  display: none;
+}
+
+.close_window_cross { 
+  width: 30px;
+  height: 30px;
+  margin: 8px 0 0 8px;
+  border: 0px;
+  background: url("../images/social_media/window-close-line.svg") rgba(242, 120, 92, 1);
+}
+
+.close_window_cross, .hidden_links { display: none }
+

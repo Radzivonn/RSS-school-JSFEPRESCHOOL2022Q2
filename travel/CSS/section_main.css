@@ -1,120 +1,39 @@
-html {
-  scroll-behavior: smooth;
+#section_preview {
+  max-width: 892px;
+  max-height: 422px;
+  margin: 32px 0 0 120px;
 }
 
-body{
-  position: relative;
-  width: 1440px;
-  height: 3735px;
-  font-style: normal;
-  background-color: white;
-  color:white;
-  margin: auto; 
-}
-
-header {
-  width: 1440px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 90px;
-  background-color: rgba(242, 120, 92, 0.7);
-  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
-  z-index: 1000;
-  margin: auto;
-}
-
-h1, h2, h3, p {
-  margin: 0px;
-}
-
-main {
-  width: 1440px;
-  height: 3611px;
-}
-
-#preview {
-  width: 1440px;
+#preview_bg {
   height: 765px;
-  background: url("./images/main_bg.jpg") no-repeat;
+  /* background: url("../images/main_bg.jpg") no-repeat; */
 }
 
-#navigation {
+#preview_bg_img {
   position: absolute;
-  top: 35px;
-  left: 494px;
-  width: 527px;
-  height: 21px;
-
-  display: inline-flex;
-	justify-content: space-between;
-  gap: 42px;
-  color: white;
+  /* top: 0px;
+  left: 0px; */
+  max-width: 100%;
+  height: 765px; 
+  z-index: -1; 
 }
 
-
-.nav_links {
-  height: 21px;
-  font-weight: 400;
-
-  color: white;
-  text-decoration: none;
-}
-
-.Red_Hat_Text_Medium {
-  font-family: 'Red Hat Text';
-  font-weight: 500;
-}
-
-.Aleo_Regular {
-  font-weight: 400;
-}
-.Aleo_Bold {
-  font-weight: 700;
-}
-
-.Aleo_Bold_italic {
-  font-style: italic;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.Aleo_italic {
-  font-style: italic;
-  font-weight: 400;
-}
-
-.Aleo_Regular, .Aleo_Bold, .Aleo_italic, .Aleo_Bold_italic {
-  font-family: 'Aleo';
-}
-
-#travel_logo {
-  position: absolute;
-  top: 25px;
-  left: 120px;
-  width: 216px;
-  height: 31px;
-}
-
-#logo {
-  display: inline;
-}
-
-#header_title {
-  display: inline;
-  width: 180px;
-  height: 31px;
-  font-family: 'Magra';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
-  color: white;
+.list { 
+  justify-content: space-between;
+  
   margin: 0;
+  padding: 0;
 }
 
+.list_item {
+  display: list-item;
+  list-style: none;
+  white-space: nowrap;
+}
+
+#nav_menu {
+  flex-wrap: wrap;
+}
 
 .button {
   background-color: #0D606F;
@@ -129,25 +48,9 @@ main {
   animation: buttons_animation 300ms ease-in;
 }
 
-.nav_links:hover, .button:hover {
+.nav_link:hover, .button:hover {
   cursor: pointer;
   color: wheat;
-}
-
-
-#login_button {
-  position: absolute;
-  top: 25px;
-  right: 120px;
-  width: 103px;
-  height: 41px;
-  font-size: 16px;
-  line-height: 21px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
-}
-
-#login_button:active {
-  animation: Login_button_animation 300ms ease-in;
 }
 
 @keyframes buttons_animation {
@@ -171,90 +74,78 @@ main {
 }
 
 #start_planning_button {
-  position: absolute;
   width: 228px;
-  height: 59px;
-  top: 18px;
-  right: 18px;
+  height: 62.1%;
   font-size: 24px;
   line-height: 32px;
+  margin: 18px 18px 18px 0;
 }
 
 #plan_your_trip {
-  position: absolute;
-  width: 892px;
-  height: 422px;
-  left: 120px;
-  top: 122px;
+  flex-direction: column;
+  z-index: 100;
 }
 
+#plan_your_trip p { margin-top: 30px }
+
 #preview_title {
-  font-size: 80px;
   line-height: 96px;
   color: white;
   margin: 0;
 }
 
 #search {
-  position: absolute;
-  width: 892px;
   height: 95px;
-  left: 120px;
-  top: 416px;
+  margin: 46px 0 0 0;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   font-size: 24px;
   color: #F2785C;
 }
 
+#search p {margin: 0 0 0 41px}
+
+/*--------------------------------------------*/
+
+
 #steps {
-  width: 1177px;
-  height: 247px;
-  margin: 80px auto 97px;
+  max-width: 1177px;
+  max-height: 247px;
+  margin: 5.55% 4.16% 6.74%;
 }
-
-.section_title {
-  height: 53px;
-  font-size: 40px;
-  line-height: 53px;
-  color: #F2785C;
-  text-align: center;
-  margin: 0px auto;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-} 
 
 #steps_container {
-  justify-content: space-around;
-  width: 1177px;
-  height: 154px;
-  margin-top: 40px; 
-}
-
-
-.steps_item {
-  font-size: 20px;
-  line-height: 24px;
-  color: #0D606F;
+  justify-content: space-between;
+  max-width: 1177px;
+  max-height: 154px;
+  margin-top: 3.39%;
+  padding: 0 9.17% 0 6.2%;
 }
 
 .steps_icon {
   align-items: center;
-  height: 100px;
-  width: 100px;
   border-radius: 16px;
   background-color: #F2785C;
-  margin: 0px auto 30px;
 }
 
 .steps_logo {
-  height: 45px;
-  width: 50px;
   margin: auto;
 }
+
+#steps_text {
+  justify-content: space-between;
+  height: 24px;
+  color: #0D606F;
+  margin-top: 20px;
+}
+
+
+/*--------------------------------------------*/
+
+
+
 
 #destinations {
   position: absolute;
@@ -356,7 +247,7 @@ main {
   width: 1442px;
   left: 0px;
   top: 2404px;
-  background: url("./images/Story_images/stories_bg.jpg");
+  background: url("../images/Story_images/stories_bg.jpg");
   margin: 0px auto;
 }
 
