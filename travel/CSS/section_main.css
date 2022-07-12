@@ -142,112 +142,72 @@
 }
 
 
-/*--------------------------------------------*/
-
-
+/*============================================================*/
 
 
 #destinations {
-  position: absolute;
-  height: 1042px;
-  width: 1440px;
-  left: 0px;
-  top: 1189px;
+  max-height: 1042px;
+  max-width: 1440px;
 }
 
 #destinations_container {
-  position: absolute;
-  width: 1440px;
+  max-width: 2520px;
   height: 800px;
-  top: 99px;
 
   align-items: flex-start;
+  justify-content: center;
   padding: 0px;
-  gap: 60px;
+  margin: 3.2% 0 0 0;
+  gap: 4.28%;
 
   overflow: hidden;
 }
 
-.destinations_photo {
-  position: absolute;
-  top: 0px;
+/* #Spain {
+  background: url(../images/destinations_images/Spain.jpg) no-repeat;
+}
+#Japan {
+  background: url(../images/destinations_images/Japan.jpg) no-repeat;
+}
+#USA {
+  background: url(../images/destinations_images/USA.jpg) no-repeat;
+} */
+
+.destination_photo {
+  position: relative;
   width: 800px;
   height: 800px;
-  flex: none;
-  flex-grow: 0;
   border-radius: 16px;
 }
 
-#Spain {
-  left: -540px;
-  order: 0;
+.scroll_circle {
+  fill: rgba(242, 120, 92, 0.5);
 }
 
-#Spain_text {
-  position: absolute;
-  height: 42px;
+
+/* #Spain_text {
   width: 95px;
 }
 
-#Japan {
-  left: 320px;
-  order: 1;
-}
-
 #Japan_text {
-  position: absolute;
-  height: 42px;
   width: 108px;
 }
 
-#USA {
-  left: 1180px;
-  order: 2;
-}
-
 #USA_text {
-  position: absolute;
-  height: 42px;
   width: 66px;
-}
+} */
 
-#Spain_text, #Japan_text, #USA_text {
-  position: absolute;
-  left: 15px;
-  bottom: 40px;
-  font-size: 32px;
-  line-height: 42px;
-}
+/* id="destinations_button" */
 
+/*============================================================*/
 
-#scroll_circles {
-  position: absolute;
-  width: 80px;
-  height: 20px;
-  left: 670px;
-  top: 920px;
-
-  align-items: flex-start;
-  padding: 0px;
-  gap: 10px;
-  
-}
-
-.scroll_circle {
-  width: 20px;
-  height: 20px;
-
-  flex: none;
-  flex-grow: 0;
-}
 
 #bg_image {
-  position: absolute;
   height: 1331px;
   width: 1442px;
   left: 0px;
   top: 2404px;
-  background: url("../images/Story_images/stories_bg.jpg");
+  background: url("./images/Story_images/stories_bg.jpg");
   margin: 0px auto;
 }
 
@@ -257,7 +217,6 @@
   height: 1270px;
   left: 0px;
   bottom: 61px;
-
   background: rgba(255, 255, 255, 0.7);
 }
 
@@ -321,19 +280,6 @@
 
 .story_description a:visited {
   color: #0D606F;
-}
-
-.arrow_button {
-  position: absolute;
-  height: 59px;
-  width: 228px;
-
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  font-size: 24px;
-  line-height: 32px;
 }
 
 footer {
