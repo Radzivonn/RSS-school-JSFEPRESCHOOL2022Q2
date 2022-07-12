@@ -148,6 +148,7 @@
 #destinations {
   max-height: 1042px;
   max-width: 1440px;
+  margin-bottom: 5.55%;
 }
 
 #destinations_container {
@@ -204,49 +205,40 @@
 
 #bg_image {
   height: 1331px;
-  width: 1442px;
-  left: 0px;
-  top: 2404px;
-  background: url("./images/Story_images/stories_bg.jpg");
-  margin: 0px auto;
+  max-width: 1440px;
+  background: url("../images/Story_images/stories_bg.jpg") no-repeat;
+  margin: 2.77% auto 0;
 }
 
 #stories_bg {
-  position: absolute;
-  width: 1445px;
-  height: 1270px;
-  left: 0px;
-  bottom: 61px;
+  max-width: 83.05%;
+  max-height: 87.63%;
   background: rgba(255, 255, 255, 0.7);
+  padding: 2.96% 8.68% 3.03% 8.26%;
 }
 
 #stories {
-  position: absolute;
-  width: 1201px;
-  height: 1322px;
-  left: 119px;
-  bottom: 41px;
+  max-width: 1201px;
+  max-height: 1322px;
+  margin: 0px auto;
 }
 
 #stories_container {
-  position: absolute;
-  top: 93px;
-  width: 1200px;
+  max-width: 1200px;
   height: 1090px;
   
   flex-direction: column;
-  gap: 30px;
-  margin: 40px 0px;
+  gap: 2.5%;
+  margin-bottom: 3.33%;
 }
 
 .story {
-  width: 1200px;
+  max-width: 1200px;
   height: 250px;
-  gap: 40px;
+  gap: 3.33%;
 }
 
 .story_image {
-  width: 400px;
   height: 250px;
 
   filter: drop-shadow(0px 4px 4px #0D606F);
@@ -254,18 +246,15 @@
 }
 
 .stories_text {
-  width: 760px;
-  height: 250px;
+  max-height: 250px;
   color: #0D606F;
 }
 
 .story_title {
-  width: 760px;
-  height: 42px;
-
   font-size: 35px;
   line-height: 42px;
-  margin-bottom: 24px;
+  margin-bottom: 3.15%;
+  white-space: nowrap;
 }
 
 .story_description {
@@ -274,21 +263,29 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.story_description a:hover {
+/* .stories_text a {
+  font-size: 20px;
+  height: 10px;
+} */
+
+.stories_text a:hover {
   text-decoration: none;
 }
 
-.story_description a:visited {
+.stories_text a:visited {
   color: #0D606F;
 }
 
+/*============================================================*/
+
 footer {
-  position: absolute;
-  width: 729px;
-  height: 34px;
-  left: 590px;
-  top: 3688px;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 4.58%;
+  gap: 22.77%;
 }
+
 
 #footer_data {  
   width: 260px;
@@ -296,14 +293,17 @@ footer {
 
   font-size: 15px;
   line-height: 21px;
-  margin-top: 7px;
+  /* margin: 0 40.1% ; */
 }
 
 #social_media {
-  position: absolute;
   width: 141px;
   height: 34px;
-  left: 588px;
-  top: 0px;
   gap: 20px;
+  margin-right: 8.4%;
+  /* margin: 0 8.4% 0 81.8%; */
+}
+
+#footer_data, #social_media {
+  margin-top: 20px;
 }

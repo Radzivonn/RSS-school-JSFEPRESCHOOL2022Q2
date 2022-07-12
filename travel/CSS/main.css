@@ -45,6 +45,10 @@ main {
   flex-direction: row;
 }
 
+.arrow_button {
+  margin: 0 auto;
+}
+
 ._container {
   max-width: 1200px;
   margin: 0px auto;

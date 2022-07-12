@@ -4,13 +4,11 @@ const cross = document.querySelector('.close_window_cross');
 const circles_slider =  document.getElementById('scroll_circles');
 const destinations_container = document.getElementById('destinations_container');
 const screenWidth = window.screen.width;
-let Close_menu_flag = false;
 
 /* переменная для хранения предыдущей ширины экрана */
 var last_screenWidth;
 
 
-/* number_ON переменная для хранения номера активного круга в слайдере */
 function switch_slider(number_ON) {
   const svg_circles = document.querySelectorAll('.svg_circle');
   const circles = document.querySelectorAll('.scroll_circle');
@@ -24,32 +22,53 @@ function switch_slider(number_ON) {
   }
 }
 
+/* переменная text_number отвечает за номер отображаемого текста в зависимости от разрешения экрана */
+function change_stories_text(text_number) {
+  let paragraph = document.querySelectorAll('.story_description');
+  for(let i = 0; i < paragraph.length; i++){
+    // 0 - разрешение 390 и меньше
+    if (text_number === 0) paragraph[i].textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... Read More';
+    else paragraph[i].textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... Read More ';
+  }
+}
+
+
 function window_resize() {
   const screenWidth = window.screen.width;
   if(last_screenWidth <= 390 && screenWidth > 390) {
     destinations_container.after(circles_slider);
     switch_slider(2);
+    change_stories_text(1);
   }
   else if (screenWidth <= 390 && last_screenWidth > 390) {
     destinations_container.append(circles_slider);
     switch_slider(1);
+    change_stories_text(0);
+
     const scroll_circles = document.querySelector('#scroll_circles');
     scroll_circles.style="bottom: 12px";
   }
   last_screenWidth = screenWidth;
 }
 
-function Open_close_menu() {
+function toggleMenu() {
   document.body.classList.toggle('_lock');
   navigation.classList.toggle('_active');
 }
 
+/* number_ON переменная для хранения номера активного круга в слайдере */
+
 
 window_resize();
-if (screenWidth > 390) switch_slider(2);
+if (screenWidth > 390){
+  switch_slider(2);
+  change_stories_text(1);
+}
+
 else {
   switch_slider(1);
   scroll_circles.style="bottom: -32px";
+  change_stories_text(1);
 }
 
 
@@ -61,12 +80,12 @@ window.addEventListener('resize', function(e){
 /*------------------открытие и закрытие меню------------------*/
 if (icon_menu) {
   icon_menu.addEventListener("click", function (e) {
-    Open_close_menu();
+    toggleMenu();
   });
 
   if (cross) {
     cross.addEventListener("click", function (e) {
-      Open_close_menu();
+      toggleMenu();
     });
   }
 }
@@ -92,6 +111,8 @@ if (menu_links.length > 0) {
       });
       e.preventDefault();
     }
+    toggleMenu();
   }
 }
+
 /*------------------плавная прокрутка по якорям------------------*/
