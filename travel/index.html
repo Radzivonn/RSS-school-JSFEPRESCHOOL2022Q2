@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-
-  <script src="index.js"></script>
+  <meta name="viewport" content="width=device-width">
 
   <!-- add favicon -->
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
@@ -15,109 +14,119 @@
   <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- include CSS file -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./CSS/main.css">
 
   <title> Travel </title>
 </head>
 
 <body>
-  <header>
-      <div id="travel_logo">
-        <img id="logo" src="./images/header-logo.svg" alt="logo" />
-        <h3 id="header_title"> Travel Portal </h3>
-      </div>
-      <nav class="Red_Hat_Text_Medium" id="navigation">
-        <a class="nav_links" style="width: 98px" href="#steps_anchor"> How It Works </a>
-        <a class="nav_links" style="width: 105px"> Plan Your Trip </a>
-        <a class="nav_links" style="width: 95px" href="#destinations_anchor"> Destinations </a>
-        <a class="nav_links" style="width: 103px" href="#stories_anchor"> Travel Stories </a>
-      </nav>
-      <button class="button Red_Hat_Text_Medium" id="login_button"> Login </button>
-  </header>
-
-  <main>
-    <!-- section-preview -->
-    <section id="preview">
-      <div id="plan_your_trip">
-        <h1 class="Aleo_Bold" id="preview_title"> Explore the beauty of the World </h1>
-        <p class="Aleo_Bold_italic" style="margin-top: 30px"> Receive personalized recommendations for countries, hotels, activities and more </p>
-      </div>
-      <div id="search">
-        <p class="Aleo_italic" style="margin: 32px 0 0 41px"> What would you like to do? </p>
-        <button class="button Red_Hat_Text_Medium" id="start_planning_button"> Start Planning </button>
-      </div>
-    </section>
+  <div class="wrapper">
+    <div id="preview_bg">
+      <img id="preview_bg_img" src="./images/main_bg.jpg" alt="bg">
+        <header class="header">
+          <div class="container" id="header__container">
+            <div id="travel_logo">
+              <img id="logo" src="./images/header-logo.svg" alt="logo" />
+              <h3 id="header_title"> Travel Portal </h3>
+            </div>
+            <nav class="Red_Hat_Text_Medium" id="navigation">
+              <button class="close_window_cross"></button>
+              <ul class="list container" id="nav_menu">
+                <li class="list_item"> <a data-goto="#steps_anchor" class="nav_link" href="#" style="width: 98px"> How It Works </a> </li>
+                <li class="list_item"> <a data-goto="#plan_trip_anchor" class="nav_link" href="#" style="width: 105px"> Plan Your Trip </a> </li>
+                <li class="list_item"> <a data-goto="#destinations_anchor" class="nav_link" href="#" style="width: 95px" > Destinations </a> </li>
+                <li class="list_item"> <a data-goto="#stories_anchor" class="nav_link" href="#" style="width: 103px"> Travel Stories </a> </li>
+                <li class="hidden_links"> <a data-goto="#account_anchor" class="nav_link" href="#"> Account </a> </li>
+                <li class="hidden_links"> <a data-goto="#social_media_anchor" class="nav_link" href="#"> Social Media </a> </li>
+              </ul>  
+            </nav>
+            <button class="button Red_Hat_Text_Medium" id="login_button"> Login </button>
+            <div class="menu__icon">
+              <span></span>
+            </div>
+          </div>
+        </header>
+      
+      <!-- section-preview -->
+      <section id="section_preview">
+        <div class="container" id="plan_your_trip">
+          <h1 class="Aleo_Bold" id="preview_title"> Explore the beauty of the World </h1>
+          <p class="Aleo_Bold_italic"> Receive personalized recommendations for countries, hotels, activities and more </p>
+          <a id="plan_trip_anchor"></a>
+          <div class="container" id="search">
+            <p class="Aleo_italic"> What would you like to do? </p>
+            <button class="button Red_Hat_Text_Medium" id="start_planning_button"> Start Planning </button>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- section-steps -->
     <section id="steps">
       <a id="steps_anchor"></a>
       <h2 class="section_title Red_Hat_Text_Medium"> 3 STEPS TO THE PERFECT TRIP </h2>
       <div class="container" id="steps_container">
-        <div class="steps_item">
-          <div class="steps_icon container">
-            <img class="steps_logo" src="./images/Steps_images/Vector.svg" alt="Steps_logo">
-          </div>
-          <p class="Aleo_Regular"> Tell us what you want to do </p>
+        <div class="steps_icon container">
+          <img class="steps_logo" src="./images/Steps_images/Vector.svg" alt="Steps_logo">
         </div>
-        <div class="steps_item">
-          <div class="steps_icon container">
-            <img class="steps_logo" src="./images/Steps_images/Vector2.svg" alt="Steps_logo">
-          </div>
-          <p class="Aleo_Regular"> Tell us what you want to do </p>
-        </div> 
-        <div class="steps_item">
-          <div class="steps_icon container">
-            <img class="steps_logo" src="./images/Steps_images/Vector3.svg" alt="Steps_logo">
-          </div>
-          <p class="Aleo_Regular"> We will give you recommendations </p>
+        <div class="steps_icon container">
+          <img class="steps_logo" src="./images/Steps_images/Vector2.svg" alt="Steps_logo">
+        </div>
+        <div class="steps_icon container">
+          <img class="steps_logo" src="./images/Steps_images/Vector3.svg" alt="Steps_logo">
         </div>
       </div>
+      <div class="container" id="steps_text">
+        <p class="Aleo_Regular"> Tell us what you want to do </p>
+        <p class="Aleo_Regular" style="white-space: nowrap; margin-left: 22px"> Share us preferable dates </p>
+        <p class="Aleo_Regular" style="text-align: right"> We will give you recommendations </p>
+      </div>
     </section>
+    
 
     <!-- section-destinations -->
     <section id="destinations">
       <a id="destinations_anchor"></a>
       <h2 class="section_title Red_Hat_Text_Medium"> POPULAR DESTINATIONS </h2>
       <div class="container Red_Hat_Text_Medium" id="destinations_container">
-        <div class="destinations_photo" id="Spain">
-          <img src="./images/destinations_images/Spain.jpg" alt="Spain">
-          <p id="Spain_text"> Spain </p>
+        <div class="destination_photo" id="Spain">
+          <img class="destination_photo" src="./images/destinations_images/Spain.jpg" alt="Spain">
+          <p id="Spain_text"> SPAIN </p>
         </div>
-        
-        <div class="destinations_photo" id="Japan"> 
-          <img src="./images/destinations_images/Japan.jpg" alt="Japan">
-          <p id="Japan_text"> Japan </p>
+        <div class="destination_photo" id="Japan"> 
+          <img class="destination_photo" src="./images/destinations_images/Japan.jpg" alt="Japan">
+          <p id="Japan_text"> JAPAN </p>
         </div>
-        <div class="destinations_photo" id="USA">
-          <img src="./images/destinations_images/USA.jpg" alt="USA">
+        <div class="destination_photo" id="USA">
+          <img class="destination_photo" src="./images/destinations_images/USA.jpg" alt="USA">
           <p id="USA_text"> USA </p>
         </div>
-      </div>
+      </div>  
 
       <div class="container" id="scroll_circles">
-        <svg class="scroll_circle" style="order: 0">
-          <circle cx="10" cy="10" r="10" fill="rgba(242, 120, 92, 0.5)" />
+        <svg class="svg_circle" style="order: 0">
+          <circle class="scroll_circle" cx="50%" cy="50%" r="50%"/>
         </svg>
-        <svg class="scroll_circle" style="order: 1">
-          <circle cx="10" cy="10" r="10" fill="#F2785C" />
+        <svg class="svg_circle" style="order: 1">
+          <circle class="scroll_circle" cx="50%" cy="50%" r="50%"/>
         </svg>
-        <svg class="scroll_circle" style="order: 2">
-          <circle cx="10" cy="10" r="10" fill="rgba(242, 120, 92, 0.5)" />
+        <svg class="svg_circle" style="order: 2">
+          <circle class="scroll_circle" cx="50%" cy="50%" r="50%"/>
         </svg>
-      </div>
+      </div> 
 
-      <button class="button container arrow_button Red_Hat_Text_Medium" style="left: 600px; top: 980px">
-        <img src="./images/destinations_images/Vector.svg" alt="vector">
+      <button class="button container arrow_button Red_Hat_Text_Medium">
+        <img class="arrow" src="./images/destinations_images/Vector.svg" alt="vector">
         Find More
-      </button>
+      </button> 
     </section>
 
     <!-- section-stories -->
+    <h2 class="section_title Red_Hat_Text_Medium"> TRAVEL STORIES </h2>
     <div id="bg_image">
       <div id="stories_bg">
         <section id="stories">
           <a id="stories_anchor"></a>
-          <h2 class="section_title Red_Hat_Text_Medium"> TRAVEL STORIES </h2>
           <div class="container" id="stories_container">
 
             <div class="story container"> 
@@ -125,12 +134,7 @@
               <div class="stories_text Aleo_Regular"> 
                 <h3 class="story_title"> 10 Photos of Attractive Thailand </h3>
                 <p class="story_description"> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                 
                   <a class="Aleo_Bold" href="#"> Read More </a> 
                 </p>
               </div>
@@ -141,12 +145,7 @@
               <div class="stories_text Aleo_Regular"> 
                 <h3 class="story_title"> Canyonlands National Park, Utah </h3>
                 <p class="story_description"> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                  
                   <a class="Aleo_Bold" href="#"> Read More </a> 
                 </p>
               </div>
@@ -157,12 +156,7 @@
               <div class="stories_text Aleo_Regular"> 
                 <h3 class="story_title"> I left my heart in the Mountains! </h3>
                 <p class="story_description"> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                 
                   <a class="Aleo_Bold" href="#"> Read More </a> 
                 </p>
               </div>
@@ -173,35 +167,33 @@
               <div class="stories_text Aleo_Regular"> 
                 <h3 class="story_title"> The Longest journey in my life! </h3>
                 <p class="story_description"> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                  mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... 
+                  
                   <a class="Aleo_Bold" href="#"> Read More </a> 
                 </p>
               </div>
             </div> 
           </div>
-          <button class="button container arrow_button Red_Hat_Text_Medium" style="left: 489px; bottom: 0px">
-            <img src="./images/destinations_images/Vector.svg" alt="vector">
+          <button class="button container arrow_button Red_Hat_Text_Medium">
+            <img class="arrow" src="./images/destinations_images/Vector.svg" alt="vector">
             See More
           </button>
         </section>
       </div>
+      <footer class="container">
+        <a id="social_media_anchor"></a>
+        <h3 class="Red_Hat_Text_Medium" id="footer_data"> All Rights Reserved © Travel Portal </h3>
+        <ul class="container list" id="social_media">
+          <li class="list_item"> <a href="https://www.instagram.com/rs.school/?hl=ru"> <img src="./images/social_media/instagram_icon.svg" alt="instagram_icon"> </a> </li>
+          <li class="list_item"> <a href="https://rs.school/js-stage0/"> <img src="./images/social_media/video_icon.svg" alt="video_icon"> </a> </li>
+          <li class="list_item"> <a href="https://github.com/Radzivonn"> <img src="./images/social_media/GitHub_icon.svg" alt="GitHub_icon"> </a> </li>
+        </ul> 
+      </footer>
     </div>
-  </main>
-
-  <footer>
-    <h3 class="Red_Hat_Text_Medium" id="footer_data"> All Rights Reserved © Travel Portal </h3>
-    <div class="container" id="social_media">
-      <a href="https://www.instagram.com/rs.school/?hl=ru"> <img src="./images/social_media/instagram_icon.svg" alt="instagram_icon"> </a>
-      <a href="https://rs.school/js-stage0/"> <img src="./images/social_media/video_icon.svg" alt="video_icon"> </a>
-      <a href="https://github.com/Radzivonn"> <img src="./images/social_media/GitHub_icon.svg" alt="GitHub_icon"> </a>
-    </div>
-  </footer>
-
+  </div>
+  
+  <!-- include scripts -->
+  <script src="./JS/script.js"></script>
+  <script src="./JS/index.js"></script>
 </body>
 
 </html>
