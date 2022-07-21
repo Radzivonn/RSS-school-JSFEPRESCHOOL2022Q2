@@ -6,13 +6,10 @@
 
 #preview_bg {
   height: 765px;
-  /* background: url("../images/main_bg.jpg") no-repeat; */
 }
 
 #preview_bg_img {
   position: absolute;
-  /* top: 0px;
-  left: 0px; */
   max-width: 100%;
   height: 765px; 
   z-index: -1; 
@@ -37,40 +34,24 @@
 
 .button {
   background-color: #0D606F;
-  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
   color: white;
   border: 0px;
   padding: 0px;
+  box-shadow: 0px 0px 3px 0px rgba(13, 96, 111, 0.08);
 }
 
-.button:active {
-  animation: buttons_animation 300ms ease-in;
-}
+.button, .nav_link { transition: all 300ms ease-in 0s }
+.button:active{ box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16) }
 
 .nav_link:hover, .button:hover {
   cursor: pointer;
   color: wheat;
 }
 
-@keyframes buttons_animation {
-  0% {
-    box-shadow: 0px 0px 3px 0px rgba(13, 96, 111, 0.08);
-  }
-  
-  100% {
-    box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16);
-  }
-}
-
 @keyframes Login_button_animation {
-  0% {
-    box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16);
-  }
-
-  100% {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
+  0% { box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16) }
+  100% { box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) }
 }
 
 #start_planning_button {
@@ -109,7 +90,6 @@
 
 /*--------------------------------------------*/
 
-
 #steps {
   max-width: 1177px;
   max-height: 247px;
@@ -141,9 +121,7 @@
   margin-top: 20px;
 }
 
-
 /*============================================================*/
-
 
 #destinations {
   max-height: 1042px;
@@ -155,24 +133,17 @@
   max-width: 2520px;
   height: 800px;
 
+  position: relative;
+  left: 0px;
+
   align-items: flex-start;
   justify-content: center;
+  transition: all ease 1s;
+
   padding: 0px;
   margin: 3.2% 0 0 0;
   gap: 4.28%;
-
-  overflow: hidden;
 }
-
-/* #Spain {
-  background: url(../images/destinations_images/Spain.jpg) no-repeat;
-}
-#Japan {
-  background: url(../images/destinations_images/Japan.jpg) no-repeat;
-}
-#USA {
-  background: url(../images/destinations_images/USA.jpg) no-repeat;
-} */
 
 .destination_photo {
   position: relative;
@@ -185,23 +156,9 @@
   fill: rgba(242, 120, 92, 0.5);
 }
 
-
-/* #Spain_text {
-  width: 95px;
-}
-
-#Japan_text {
-  width: 108px;
-}
-
-#USA_text {
-  width: 66px;
-} */
-
-/* id="destinations_button" */
+.destination_photo_arrow { display: none }
 
 /*============================================================*/
-
 
 #bg_image {
   height: 1331px;
@@ -263,11 +220,6 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* .stories_text a {
-  font-size: 20px;
-  height: 10px;
-} */
-
 .stories_text a:hover {
   text-decoration: none;
 }
@@ -286,14 +238,12 @@ footer {
   gap: 22.77%;
 }
 
-
 #footer_data {  
   width: 260px;
   height: 21px;
 
   font-size: 15px;
   line-height: 21px;
-  /* margin: 0 40.1% ; */
 }
 
 #social_media {
@@ -301,7 +251,6 @@ footer {
   height: 34px;
   gap: 20px;
   margin-right: 8.4%;
-  /* margin: 0 8.4% 0 81.8%; */
 }
 
 #footer_data, #social_media {

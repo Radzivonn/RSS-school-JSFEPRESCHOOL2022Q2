@@ -3,7 +3,6 @@
 @import url("section_main.css");
 @import url("media.css");
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -47,9 +46,4 @@ main {
 
 .arrow_button {
   margin: 0 auto;
-}
-
-._container {
-  max-width: 1200px;
-  margin: 0px auto;
 }
