@@ -283,10 +283,51 @@
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
   }
-
-
 }
 
+/*============================================================*/
+
+@media (max-width: 479px) {
+  .popup__content { width: 60% }
+  .popup__title { 
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .popup__buttons {
+    height: 80px;
+    gap: 10px;
+    margin: 5.36% 0px 0px;
+
+  }
+  .popup__button {
+    height: 30px;
+    font-size: 14px;
+    gap: 5px;
+    padding: 1.5% 2.68% 2.68%;
+  }
+  .popup__form { 
+    gap: 5px;
+    margin: 0px 0px 4%;
+  }
+  .popup__input { 
+    height: 30px;
+    font-size: 14px;
+  }
+  .popup__label{ 
+    font-size: 12px;
+    gap: 0px;
+  }
+  .popup__text { 
+    font-size: 11px;
+    margin-left: 19%; 
+  }
+  #or { 
+    height: 13px;
+    font-size: 13px;
+  }
+  .popup__line { margin: 4% 0px 3%}
+}
+  
 /*============================================================*/
 
 @media (min-width: 391px) and (max-width: 479px) {
@@ -457,7 +498,6 @@
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
   }
-
 } 
 
 /*============================================================*/
@@ -627,6 +667,47 @@
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
   }
+
+/*------------------------------------------*/
+
+  .popup__content { width: 55% }
+  .popup__title { 
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .popup__buttons {
+    height: 90px;
+    gap: 10px;
+    margin: 5.36% 0px 0px;
+
+  }
+  .popup__button {
+    height: 35px;
+    font-size: 15px;
+    gap: 10px;
+    padding: 1.5% 2.68% 2.68% ;
+  }
+  .popup__form { 
+    gap: 10px;
+    margin: 0px 0px 4%;
+   }
+  .popup__input { 
+    height: 35px;
+    font-size: 18px;
+  }
+  .popup__label{ 
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .popup__text { 
+    font-size: 12px;
+    margin-left: 28%; 
+  }
+  #or { 
+    height: 20px;
+    font-size: 16px;
+   }
+   .popup__line { margin: 4% 0px 3%}
 }
 
 /*============================================================*/
@@ -759,6 +840,26 @@
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
   }
+
+/*------------------------------------------*/
+  .popup__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .popup__buttons {
+    height: 110px;
+    gap: 15px;
+  }
+  .popup__button {
+    height: 45px;
+    font-size: 18px;
+  }
+  .popup__form { gap: 15px }
+  .popup__input { 
+    height: 45px;
+    font-size: 21px;
+  }
+  .popup__text { margin-left: 28% } 
 }
 
 /*============================================================*/

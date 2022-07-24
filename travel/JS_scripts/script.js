@@ -7,6 +7,7 @@ if(cross) OnMenuClick(cross);
 
 /*------------------плавная прокрутка по якорям------------------*/
 const menu_links = document.querySelectorAll('.nav_link[data-goto]');
+let account_button;
 if (menu_links.length > 0) {
   menu_links.forEach(menu_link => {
     menu_link.addEventListener('click', OnMenuLinkClick);
@@ -19,8 +20,7 @@ slides.forEach(slide => {
   slide.addEventListener('click', function(e) {
     if(window.screen.width > 390) {
       const order = parseInt(window.getComputedStyle(e.currentTarget).order);
-      if(order != 1 && slide_num != order + 1) slide_num = order + 1; // order - на который кликнули, slide_num - был нажат последним
-      else slide_num = 2;
+      order != 1 && slide_num != order + 1 ? slide_num = order + 1 : slide_num = 2; // order - на который кликнули, slide_num - был нажат последним
       slider_click(true);
     }
   });
@@ -38,3 +38,21 @@ click_element.forEach(element => {
   });
 });
 /*------------------код слайдера в секции destinations------------------*/
+
+/*------------------------------код popup------------------------------*/
+if(popupLinks.length > 0) {
+  for (let index = 0; index < popupLinks.length; index++) {
+    const popupLink = popupLinks[index];
+    popupLink.addEventListener('click', function(e) {
+      if(popupLink.getAttribute('id') === 'login_button' || popupFlagON) {
+        popupFlagON = false;
+        popupOpen(document.querySelector('.popup'));
+      } else {
+        popupChange(document.querySelector('.popup__content'));
+        e.preventDefault(); // запрет перезагрузки страницы для ссылки
+      }
+      popupInputs.forEach(popupInput => popupInput.value = '');
+    })
+  }
+}
+/*------------------------------код popup------------------------------*/
