@@ -36,11 +36,11 @@
                 <li class="list_item"> <a data-goto="#plan_trip_anchor" class="nav_link" href="#" style="width: 105px"> Plan Your Trip </a> </li>
                 <li class="list_item"> <a data-goto="#destinations_anchor" class="nav_link" href="#" style="width: 95px" > Destinations </a> </li>
                 <li class="list_item"> <a data-goto="#stories_anchor" class="nav_link" href="#" style="width: 103px"> Travel Stories </a> </li>
-                <li class="hidden_links"> <a data-goto="#account_anchor" class="nav_link" href="#"> Account </a> </li>
+                <li class="hidden_links"> <a data-goto="#account_anchor" class="nav_link popup-link"> Account </a> </li>
                 <li class="hidden_links"> <a data-goto="#social_media_anchor" class="nav_link" href="#"> Social Media </a> </li>
               </ul>  
             </nav>
-            <button class="button Red_Hat_Text_Medium" id="login_button"> Login </button>
+            <button class="button Red_Hat_Text_Medium popup-link" id="login_button"> Login </button>
             <div class="menu__icon">
               <span></span>
             </div>
@@ -88,18 +88,24 @@
     <section id="destinations">
       <a id="destinations_anchor"></a>
       <h2 class="section_title Red_Hat_Text_Medium"> POPULAR DESTINATIONS </h2>
-      <div class="container Red_Hat_Text_Medium" id="destinations_container">
-        <div class="destination_photo" id="Spain">
+      <div class="container Red_Hat_Text_Medium" id="destinations_container" >
+        <div class="destination_photo" id="Spain" style="order: 0">
           <img class="destination_photo" src="./images/destinations_images/Spain.jpg" alt="Spain">
           <p id="Spain_text"> SPAIN </p>
+          <button class="destination_photo_arrow left_arrow"> <img src="./images/social_media/arrow_left.svg" alt="arrow"> </button> 
+          <button class="destination_photo_arrow right_arrow"> <img src="./images/social_media/arrow_right.svg" alt="arrow"> </button>
         </div>
-        <div class="destination_photo" id="Japan"> 
+        <div class="destination_photo" id="Japan" style="order: 1"> 
           <img class="destination_photo" src="./images/destinations_images/Japan.jpg" alt="Japan">
           <p id="Japan_text"> JAPAN </p>
+          <button class="destination_photo_arrow left_arrow"> <img src="./images/social_media/arrow_left.svg" alt="arrow"> </button> 
+          <button class="destination_photo_arrow right_arrow"> <img src="./images/social_media/arrow_right.svg" alt="arrow"> </button>
         </div>
-        <div class="destination_photo" id="USA">
+        <div class="destination_photo" id="USA" style="order: 2">
           <img class="destination_photo" src="./images/destinations_images/USA.jpg" alt="USA">
           <p id="USA_text"> USA </p>
+          <button class="destination_photo_arrow left_arrow"> <img src="./images/social_media/arrow_left.svg" alt="arrow"> </button> 
+          <button class="destination_photo_arrow right_arrow"> <img src="./images/social_media/arrow_right.svg" alt="arrow"> </button>
         </div>
       </div>  
 
@@ -191,9 +197,46 @@
     </div>
   </div>
   
-  <!-- include scripts -->
-  <script src="./JS/script.js"></script>
-  <script src="./JS/index.js"></script>
-</body>
+  <!-- popup -->
+  <div class="popup" id="popup">
+    <div class="popup__body flex_centering">
+      <div class="popup__content">
+        <div class="popup__content__container"> 
+          <h3 class="popup__title Aleo_Bold">
+            Log in to your account
+          </h3>
+          <div class="container popup__buttons">
+            <button class="popup__button container flex_centering" style="background-color: #1877F2">
+              <img src="./images/popup_logos/facebook_logo.svg" alt="facebook_logo">
+              <p class="Red_Hat_Text_Regular"> Sign In with Facebook </p> 
+            </button>
+            <button class="popup__button container flex_centering" style="background-color: white; color: #0D606F;">
+              <img src="./images/popup_logos/google_logo.svg" alt="facebook_logo">
+              <p class="Red_Hat_Text_Regular"> Sign In with Google </p> 
+            </button>
+          </div>
+          <p class="Aleo_Bold" id="or"> or </p>
+          <form action="" class="popup__form container" >
+            <label class="popup__label container Aleo_Regular"> E-mail <input type="text" class="popup__input Red_Hat_Text_Regular" > </label>
+            <label class="popup__label container Aleo_Regular"> Password <input type="password" class="popup__input Red_Hat_Text_Regular" > </label>
+          </form>
+          <input type="submit" value='Sign In' class="popup__button container flex_centering Red_Hat_Text_Regular"
+            onclick="alert('E-mail: ' + popupInputs[0].value + '\n' + 'password: ' + popupInputs[1].value)"
+            style="background-color: #0D606F; color: white; margin-bottom: 1.79%;"> 
+          </input>
+          <a id="forgot_your_password" class="popup__underlineText popup__text Aleo_Bold"> Forgot Your Password? </a>
+          <hr width="100%" size="1px" color="#0D606F" class="popup__line">
+          <a id="popup2" class="popup__text popup-link"> Don’t have an account? <b class="popup__underlineText Aleo_Bold"> Register </b> </a>
+          <a id="popup2" class="popup__text popup-link" style="display: none"> Already have an account? <b class="popup__underlineText Aleo_Bold"> Log in </b> </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- include scripts -->
+  <script src="./JS_scripts/functions_and_variables.js"></script>
+  <script src="./JS_scripts/script.js"></script>
+  <script src="./JS_scripts/index.js"></script>
+
+</body>
 </html>

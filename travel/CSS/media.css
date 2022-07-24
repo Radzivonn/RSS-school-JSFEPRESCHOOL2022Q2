@@ -1,15 +1,9 @@
 @media (max-width: 390px) {
-  body {
-    max-width: 390px;
-  }
+  body { max-width: 390px }
 
-  main {
-    max-width: 390px;
-  }
+  main { max-width: 390px }
 
-  .wrapper {
-    border-radius: 30px;
-  }
+  .wrapper { border-radius: 30px }
 
   #preview_bg {
     height: 251px;
@@ -58,9 +52,7 @@
   }
 
   .menu__icon::after,
-  .menu__icon::before {
-    content: "";
-  }
+  .menu__icon::before { content: "" }
 
   .menu__icon::before { top: 7px;}
   .menu__icon::after {
@@ -81,7 +73,7 @@
     height: 250px;
     width: 165px;
 
-    transform: translate(100%, 100%);
+    transform: translate(100%, 0);
     transition: all 300ms ease-in 0s;
 
     background-color: rgba(242, 120, 92, 1); 
@@ -90,9 +82,8 @@
   }
 
   #navigation._active {
-    /* filter: brightness(101%); */
     z-index: 10;
-    transform: translate(-68.5%, 100%);
+    transform: translate(0, 0);
   }
 
 
@@ -116,9 +107,7 @@
    }
 
   #preview_bg_img, #travel_logo h3, 
-  #login_button, #plan_your_trip h1, p.Aleo_Bold_italic{
-    display: none;
-  }
+  #login_button, #plan_your_trip h1, p.Aleo_Bold_italic{ display: none }
 /*------------------------------------------*/
 
   #section_preview {
@@ -164,7 +153,7 @@
   }
 
   #destinations_container {
-    position: relative;
+    left: 0;
     width: 1080px;
     height: 210px;
     justify-content: normal;
@@ -178,36 +167,21 @@
   }
   .destination_photo img{ margin: 0px }
 
-  /* #Spain {
-    background: url(../images/destinations_images/Spain_mobile.jpg) no-repeat;
-  }
-  #Japan {
-    background: url(../images/destinations_images/Japan_mobile.jpg) no-repeat;
-  }
-  #USA {
-    background: url(../images/destinations_images/USA_mobile.jpg) no-repeat;
-  } */
-
-
-  .destination_photo:before, .destination_photo:after{
+  .destination_photo_arrow {
+    display: block;
     position: absolute;
+    bottom: 88px;
     width: 30px;
     height: 30px;
     z-index: 15;
-  }
-  .destination_photo:before {
-    content: url(../images/social_media/arrow_left.svg);
-    left: 11px;
-    bottom: 86px;
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
   }
 
-  .destination_photo:after {
-    content: url(../images/social_media/arrow_right.svg);
-    right: 5px;
-    bottom: 89px;
-  }
-
+  .left_arrow { left: 5px }
+  .right_arrow { right: 5px }
   
+
   #Spain_text, #Japan_text, #USA_text {
     position: absolute;
     left: 15px;
@@ -231,6 +205,7 @@
   #scroll_circles {
     position: absolute;
     left: 177px;
+    bottom: -32px;
     width: 36px;
     height: 8px;
 
@@ -308,10 +283,51 @@
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
   }
-
-
 }
 
+/*============================================================*/
+
+@media (max-width: 479px) {
+  .popup__content { width: 60% }
+  .popup__title { 
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .popup__buttons {
+    height: 80px;
+    gap: 10px;
+    margin: 5.36% 0px 0px;
+
+  }
+  .popup__button {
+    height: 30px;
+    font-size: 14px;
+    gap: 5px;
+    padding: 1.5% 2.68% 2.68%;
+  }
+  .popup__form { 
+    gap: 5px;
+    margin: 0px 0px 4%;
+  }
+  .popup__input { 
+    height: 30px;
+    font-size: 14px;
+  }
+  .popup__label{ 
+    font-size: 12px;
+    gap: 0px;
+  }
+  .popup__text { 
+    font-size: 11px;
+    margin-left: 19%; 
+  }
+  #or { 
+    height: 13px;
+    font-size: 13px;
+  }
+  .popup__line { margin: 4% 0px 3%}
+}
+  
 /*============================================================*/
 
 @media (min-width: 391px) and (max-width: 479px) {
@@ -482,7 +498,6 @@
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
   }
-
 } 
 
 /*============================================================*/
@@ -496,7 +511,6 @@
 
   #header__container { 
     width: inherit;
-    /* height: 11px; */
     padding: 24px 40px 25px 
   }
   
@@ -654,7 +668,46 @@
     border-radius: 16px;
   }
 
-  
+/*------------------------------------------*/
+
+  .popup__content { width: 55% }
+  .popup__title { 
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .popup__buttons {
+    height: 90px;
+    gap: 10px;
+    margin: 5.36% 0px 0px;
+
+  }
+  .popup__button {
+    height: 35px;
+    font-size: 15px;
+    gap: 10px;
+    padding: 1.5% 2.68% 2.68% ;
+  }
+  .popup__form { 
+    gap: 10px;
+    margin: 0px 0px 4%;
+   }
+  .popup__input { 
+    height: 35px;
+    font-size: 18px;
+  }
+  .popup__label{ 
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .popup__text { 
+    font-size: 12px;
+    margin-left: 28%; 
+  }
+  #or { 
+    height: 20px;
+    font-size: 16px;
+   }
+   .popup__line { margin: 4% 0px 3%}
 }
 
 /*============================================================*/
@@ -705,7 +758,6 @@
 /*============================================================*/
 
 @media (min-width: 768px) and (max-width: 991px) {
-  /* header { padding: 24px 4% 25px; } */
 
   #preview_bg_img, #preview_bg {
     height: 565px; 
@@ -770,22 +822,6 @@
   }
 
 /*------------------------------------------*/
-
-  /* #stories_container {
-    max-width: 1200px;
-    height: 1090px;
-    
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 40px
-  }
-
-  .story {
-    max-width: 1200px;
-    height: 250px;
-    gap: 40px;
-  } */
-
   .story_title {
     height: 28px;
     font-size: 24px;
@@ -805,7 +841,25 @@
     border-radius: 16px;
   }
 
-
+/*------------------------------------------*/
+  .popup__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .popup__buttons {
+    height: 110px;
+    gap: 15px;
+  }
+  .popup__button {
+    height: 45px;
+    font-size: 18px;
+  }
+  .popup__form { gap: 15px }
+  .popup__input { 
+    height: 45px;
+    font-size: 21px;
+  }
+  .popup__text { margin-left: 28% } 
 }
 
 /*============================================================*/
@@ -847,7 +901,6 @@
 
   #header__container { 
     width: inherit;
-    /* height: 11px; */
     padding: 24px 80px 25px 
   }
 
@@ -897,9 +950,6 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
-
-/*============================================================*/
-
 
 /*============================================================*/
 

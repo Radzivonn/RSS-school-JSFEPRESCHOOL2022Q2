@@ -1,14 +1,10 @@
-.Red_Hat_Text_Medium {
-  font-family: 'Red Hat Text';
-  font-weight: 500;
-}
+.Red_Hat_Text_Regular { font-weight: 400 }
 
-.Aleo_Regular {
-  font-weight: 400;
-}
-.Aleo_Bold {
-  font-weight: 700;
-}
+.Red_Hat_Text_Medium { font-weight: 500 }
+
+.Aleo_Regular { font-weight: 400 }
+
+.Aleo_Bold { font-weight: 700 }
 
 .Aleo_Bold_italic {
   font-style: italic;
@@ -22,6 +18,6 @@
   font-weight: 400;
 }
 
-.Aleo_Regular, .Aleo_Bold, .Aleo_italic, .Aleo_Bold_italic {
-  font-family: 'Aleo';
-}
+.Aleo_Regular, .Aleo_Bold, .Aleo_italic, .Aleo_Bold_italic { font-family: 'Aleo' }
+
+.Red_Hat_Text_Regular, .Red_Hat_Text_Medium { font-family: 'Red Hat Text' }
