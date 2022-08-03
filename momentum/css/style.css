@@ -263,24 +263,3 @@ body {
 .author {
   min-height: 20px;
 }
-
-@media (max-width: 768px) {
-  .time {
-    min-height: 80px;
-    font-size: 72px;    
-  }
-
-  .greeting-container {
-    min-height: 40px;
-    font-size: 32px;
-  }
-
-  .greeting {
-    padding: 5px;
-  }
-
-  .name {
-    font-size: 32px;
-    padding: 5px;
-  }
-}

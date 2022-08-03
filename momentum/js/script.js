@@ -1,4 +1,4 @@
-let body = document.querySelector('body');
+const body = document.querySelector('body');
 const time = document.querySelector('.time');
 const currentDate = document.querySelector('.date');
 const WeekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -6,9 +6,20 @@ const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 const greetingText = document.querySelector('.greeting');
 const slideNext = document.querySelector('.slide-next');
 const slidePrev = document.querySelector('.slide-prev');
+
+const city = document.querySelector('.city');
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const wind = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
+const weatherDescription = document.querySelector('.weather-description');
+const weatherError = document.querySelector('.weather-error');
+const weatherElements = [weatherIcon, temperature, wind, humidity, weatherDescription];
+
 let UserName = document.querySelector('.name');
 
 const MAX = 20, MIN = 1; // диапазон рандомных чисел для смены фона 
+const APPID = 'cf41f54b6e7b8c8b88e892a0f3f39fb3';
 let bgNum;
 
 
@@ -53,6 +64,28 @@ const getSlideNext = () => {
 	setBg();
 }
 
+async function getWeather() {
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=${APPID}&units=metric`;
+  const res = await fetch(url);
+  const data = await res.json();
+	if(data.message === 'city not found'){
+		weatherError.style.display = 'block';
+		weatherError.textContent = `Error! city not found for ${city.value}!`;
+		weatherElements.forEach(weatherElement => weatherElement.style.display = 'none');
+	}
+	else{
+		weatherError.style.display = 'none';
+		weatherElements.forEach(weatherElement => weatherElement.style.display = 'block');
+		weatherIcon.className = 'weather-icon owf';
+		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+		temperature.textContent = `${Math.round(data.main.temp)}°C`;
+		wind.textContent = `Wind speed: ${Math.round(data.wind.speed)} m/s`
+		humidity.textContent = `Humidity: ${data.main.humidity}%`;
+		weatherDescription.textContent = data.weather[0].description;
+	}
+}
+
+getWeather();
 
 showTime();
 getRandomBgNum();
@@ -63,9 +96,11 @@ const setLocalStorage = () => localStorage.setItem('name', UserName.value);
 
 const getLocalStorage = () => { if(localStorage.getItem('name')) UserName.value = localStorage.getItem('name') }
 
-window.addEventListener('beforeunload', setLocalStorage) // сохранить имя пользователя в local storage перед перезагрузкой или закрытием страницы
+window.addEventListener('beforeunload', setLocalStorage); // сохранить имя пользователя в local storage перед перезагрузкой или закрытием страницы
 
-window.addEventListener('load', getLocalStorage) // загрузить имя пользователя из local storage при загрузке страницы
+window.addEventListener('load', getLocalStorage); // загрузить имя пользователя из local storage при загрузке страницы
 
-slidePrev.addEventListener('click', getSlidePrev)
-slideNext.addEventListener('click', getSlideNext)
+slidePrev.addEventListener('click', getSlidePrev);
+slideNext.addEventListener('click', getSlideNext);
+
+city.addEventListener('change', () => getWeather());
