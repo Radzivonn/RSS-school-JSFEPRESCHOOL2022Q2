@@ -16,6 +16,11 @@ const weatherDescription = document.querySelector('.weather-description');
 const weatherError = document.querySelector('.weather-error');
 const weatherElements = [weatherIcon, temperature, wind, humidity, weatherDescription];
 
+let quotesJSON;
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+const changeQuoteButton = document.querySelector('.change-quote');
+
 let UserName = document.querySelector('.name');
 
 const MAX = 20, MIN = 1; // диапазон рандомных чисел для смены фона 
@@ -40,10 +45,11 @@ function showTime() {
 	setTimeout(showTime, 1000);
 }
 
-const getRandomBgNum = () => bgNum = Math.floor(Math.random() * (Math.floor(MAX) - Math.ceil(MIN) + 1)) + Math.ceil(MIN);
+const getRandomNum = (MIN, MAX) => Math.floor(Math.random() * (Math.floor(MAX) - Math.ceil(MIN) + 1)) + Math.ceil(MIN);
 
 const setBg = () => {
 	let timeOfDay = getTimeOfDay();
+	bgNum = getRandomNum(MIN, MAX);
 	bgNum < 10 ? bgNum = String(String(bgNum).padStart(2, '0')) : bgNum = String(bgNum);
 	const img = new Image();
 	img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
@@ -64,7 +70,7 @@ const getSlideNext = () => {
 	setBg();
 }
 
-async function getWeather() {
+const getWeather = async () => { 
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=${APPID}&units=metric`;
   const res = await fetch(url);
   const data = await res.json();
@@ -85,11 +91,31 @@ async function getWeather() {
 	}
 }
 
-getWeather();
+const getQuotes = async () => { 
+  const quotes = './js/quotes&authors.json';
+  const res = await fetch(quotes);
+  const data = await res.json();
+	return data;
+}
+
+const getRandomQuote = () => {
+	let index = getRandomNum(0, quotesJSON.length - 1);
+	const RandomQuote = quotesJSON[index];
+	quote.textContent = RandomQuote.quote;
+	author.textContent = RandomQuote.author;
+}
+
 
 showTime();
-getRandomBgNum();
+getRandomNum(MIN, MAX);
 setBg();
+
+getWeather();
+
+getQuotes().then((data) => {
+	quotesJSON = data; // достаём data из ассинхронной функции
+	getRandomQuote();
+});
 
 
 const setLocalStorage = () => localStorage.setItem('name', UserName.value);
@@ -104,3 +130,5 @@ slidePrev.addEventListener('click', getSlidePrev);
 slideNext.addEventListener('click', getSlideNext);
 
 city.addEventListener('change', () => getWeather());
+
+changeQuoteButton.addEventListener('click', getRandomQuote);
