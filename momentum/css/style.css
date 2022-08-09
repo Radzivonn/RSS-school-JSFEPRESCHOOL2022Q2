@@ -31,12 +31,16 @@ body {
   padding: 20px;
 }
 
+.player {
+  display: flex;
+}
+
 .player-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 120px;
-  margin-bottom: 28px;
+  margin: 0 auto;
 }
 
 .play-list {
@@ -87,7 +91,8 @@ body {
 
 .player-icon:hover,
 .slider-icon:hover,
-.change-quote:hover {
+.change-quote:hover, 
+.progress-wrapper:hover {
   opacity: 1;
 }
 
@@ -117,6 +122,138 @@ body {
 .play-next {
   background-image: url("../assets/svg/play-next.svg");
 }
+
+.timeline-wrapper {
+  width: 250px;
+  margin: 0 0 0 35px;
+}
+
+.timeline {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.progress-container {
+  background: white;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  opacity: .8;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 10px 0 #0008;
+  margin: auto;
+  transition: .3s; 
+}
+
+.progress {
+  background: #0075FF;
+  width: 0%;
+  height: 100%;
+  transition: 0.25s;
+  border-radius: 10px;
+}
+
+.audio-name {
+  height: 20px;
+  width: 100%;
+  margin: 0 auto 5px;
+}
+
+.current-time,
+.duration {
+  font-size: 14px;
+}
+
+.slider-wrapper {
+  width: 15px;
+  height: 45px;
+  margin: 20px 0 0 0;
+}
+
+
+input[type='range'] {
+  overflow: hidden;
+  width: 80px;
+  -webkit-appearance: none;
+  background-color: white;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #0075FF;
+  margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  background: #0075FF;
+  box-shadow: -80px 0 0 80px #0075FF;
+}
+
+input[type="range"]::-moz-range-progress { background-color: #0075FF }
+
+input[type="range"]::-moz-range-track { background-color: white }
+
+input[type="range"]::-ms-fill-lower { background-color: #0075FF }
+
+input[type="range"]::-ms-fill-upper { background-color: white }
+
+/* The slider itself */
+.volume-slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */        
+  -moz-transform:rotate(270deg);
+  -o-transform:rotate(270deg);
+  -ms-transform:rotate(270deg);
+  transform:rotate(270deg);
+  width: 70px; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 10px;
+}
+
+/* Mouse-over effects */
+.volume-slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 10px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 10px;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 10px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 10px;
+}
+
+.volume-logo {
+  width: 25px;
+  height: 25px;
+  margin: 35px 0 0 60px;
+  cursor: pointer;
+  /* fill: white; */
+}
+
 
 .weather {
   display: flex;
