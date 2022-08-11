@@ -1,18 +1,8 @@
 import playList from './playList.js';
 
-// const play_list = document.querySelector('.play-list'); // <ul>
-let audioTracksList = [];
-
-/* show playlist */
-playList.forEach(elem => {
-  const li = document.createElement('li');
-  li.classList.add('play-item');
-  li.textContent = elem.title
-  // play_list.append(li);
-  audioTracksList.push(li);
-});
-
-export const playButton = document.querySelector('.play'); // play/pause button
+const playButton = document.querySelector('.play'); // play/pause button
+const playPrevButton = document.querySelector('.play-prev');
+const playNextButton = document.querySelector('.play-next');
 const audioName = document.querySelector('.audio-name');
 const currentTimeElement = document.querySelector('.current-time');
 const durationElement = document.querySelector('.duration');
@@ -31,7 +21,7 @@ audioName.textContent = playList[playNum].title;
 audio.currentTime = 0;
 audio.volume = volumeSlider.valueAsNumber;
 
-export const playAudio = () => {
+const playAudio = () => {
   durationElement.textContent = playList[playNum].duration;
   audioName.textContent = playList[playNum].title;
   audio.src = playList[playNum].src;
@@ -40,7 +30,7 @@ export const playAudio = () => {
   playButton.classList.add('pause');
 }
 
-export const togglePlayPause = () => {
+const togglePlayPause = () => {
 	if(isPlay) {
 		audio.pause();
 		isPlay = false;
@@ -52,12 +42,12 @@ export const togglePlayPause = () => {
 	}
 }
 
-export const playPrevAudio = () => {
+const playPrevAudio = () => {
   playNum - 1 < 0 ? playNum = playList.length - 1 : playNum -= 1;
   playAudio();
 } 
 
-export const playNextAudio = () => {
+const playNextAudio = () => {
   playNum + 1 > playList.length - 1 ? playNum = 0 : playNum += 1;
   playAudio();
 }
@@ -79,11 +69,16 @@ function setProgress(e) {
 
 const changeVolume = () => audio.volume = volumeSlider.valueAsNumber;
 
-const toggleVolume = () => audio.volume > 0 ? audio.volume = 0 : audio.volume = volumeSlider.valueAsNumber;
+const toggleVolume = () => audio.volume > 0 ? audio.volume = 0 : changeVolume();
+
 
 audio.addEventListener('ended', playNextAudio);
 audio.addEventListener('timeupdate', updateProgress);
 
+playButton.addEventListener('click', togglePlayPause);
+playPrevButton.addEventListener('click', playPrevAudio);
+playNextButton.addEventListener('click', playNextAudio);
+
 progressContainer.addEventListener('click', setProgress);
 volumeSlider.addEventListener('input', changeVolume);
-volumeButton.addEventListener('click', toggleVolume)
+volumeButton.addEventListener('click', toggleVolume);

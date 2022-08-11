@@ -1,16 +1,24 @@
+import translationsArr from "./lang.js";
+import {lang}  from "./ChangeLanguage.js";
+
 const time = document.querySelector('.time');
 const currentDate = document.querySelector('.date');
-const WeekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const WeekDays = translationsArr["WeekDays"][lang];
+const Months = translationsArr["Months"][lang];
 const greetingText = document.querySelector('.greeting');
 
-export function getTimeOfDay() {
+export function getTimeOfDay(isShowGreetingRequest) {
 	let date = new Date();
-	const TimesOfDay = ['night', 'morning', 'afternoon', 'evening'];
-	return TimesOfDay[Math.floor(date.getHours() / 6)];
+	let TimesOfDay = ['Good night', 'Good morning', 'Good afternoon', 'Good evening'];
+	/* если запрос от функции showGreeting, переводим на один из языков */
+	if(isShowGreetingRequest){
+		TimesOfDay = translationsArr["TimesOfDay"][lang]; 
+		return TimesOfDay[Math.floor(date.getHours() / 6)];
+	}
+	return TimesOfDay[Math.floor(date.getHours() / 6)].substring(5);
 }
 
-const showGreeting = () => greetingText.textContent = `Good ${getTimeOfDay()}`;
+const showGreeting = () => greetingText.textContent = `${getTimeOfDay(true)}`;
 
 export function showTime() {
 	let date = new Date(); // Data object

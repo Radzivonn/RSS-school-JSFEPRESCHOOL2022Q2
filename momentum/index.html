@@ -30,9 +30,16 @@
       <div class="slider-wrapper">
         <input type="range" min="0.0" max="1.0" value="0.5" step="0.01" class="volume-slider" id="myRange">
       </div>
+      <!-- <svg width="25" height="25">
+          <use href="assets\svg\volume_icon.svg"></use>
+      </svg> -->
       <img class="volume-logo" src="assets\svg\volume_icon.svg" alt="volumeLogo">
     </div>
-    
+
+    <select class="change-lang">
+      <option value="en"> EN </option>
+      <option value="ru"> RU </option>
+    </select>
 
     <div class="weather">
       <input type="text" value="Minsk" class="city" />
@@ -65,6 +72,12 @@
       <div class="author"></div>
     </div>
   </footer>
+  <script type="module" src="js/modules/Date_and_greeting.js"></script>
+  <script type="module" src="js/modules/Background_change.js"></script>
+  <script type="module" src="js/modules/weather_widget.js"></script>
+  <script type="module" src="js/modules/Quotes_widget.js"></script>
+  <script type="module" src="js/modules/Audio_player.js"></script>
+  <script type="module" src="js/modules/ChangeLanguage.js"></script>
   <script type="module" src="js/script.js"></script>
 </body>
 </html>
