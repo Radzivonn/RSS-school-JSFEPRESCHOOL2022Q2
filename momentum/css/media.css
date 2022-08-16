@@ -1,20 +1,163 @@
-@media (max-width: 768px) {
+@media (max-width: 479px) {
+  body {
+    max-width: 479px;
+    /* min-width: 320px; */
+    background: rgba(0, 0, 0, 0.5) no-repeat;
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 10px 10px 10px 0;
+  }
+  
+  .main, .footer{
+    padding: 10px;
+  }
+
+  .player {
+    max-height: 100px;
+    width: 400px;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .timeline-wrapper {
+    margin: 15px 0 0 35px;
+  }
+
+  .slider-wrapper {
+    position: absolute;
+    top: 48px;
+    left: -30px;
+    margin: 0 0 0 0;
+  }
+
+  .volume-logo {
+    margin: 75px 45px 0 0;
+  }
+
+  .weather {
+    width: 100px;
+    min-height: 150px;  
+    text-align: left;
+  }
+
+
   .time {
-    min-height: 80px;
-    font-size: 72px;    
+    min-height: 65px;
+    font-size: 65px;    
+  }
+
+  .date {
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 
   .greeting-container {
-    min-height: 40px;
-    font-size: 32px;
+    min-height: 30px;
+    font-size: 20px;
   }
 
-  .greeting {
-    padding: 5px;
-  }
+  .greeting { padding: 5px }
 
   .name {
     font-size: 32px;
     padding: 5px;
   }
+
+  .quote, .author { font-size: 11px }
+  .quote {
+    min-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .social-media {
+    gap: 10px;
+    width: 150px;
+  }
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  body {
+    max-width: 767px;
+    background: center/cover, rgba(0, 0, 0, 0.5) no-repeat;
+  }
+  .player {
+    max-height: 100px;
+    width: 400px;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .timeline-wrapper {
+    margin: 15px 0 0 35px;
+  }
+
+  .slider-wrapper {
+    position: absolute;
+    top: 48px;
+    left: -30px;
+    margin: 0 0 0 0;
+  }
+
+  .volume-logo {
+    margin: 75px 45px 0 0;
+  }
+
+  .time {
+    min-height: 80px;
+    font-size: 76px;    
+  }
+
+  .date {
+    font-size: 21px;
+    margin-bottom: 5px;
+  }
+
+  .greeting-container {
+    min-height: 40px;
+    font-size: 30px;
+  }
+
+  .greeting { padding: 5px }
+
+  .name {
+    font-size: 32px;
+    padding: 5px;
+  }
+
+  .quote, .author { font-size: 13px }
+  .quote {
+    min-height: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 1025px) and (min-width: 768px){
+  .time {
+    min-height: 100px;
+    font-size: 90px; 
+  }
+
+  .date {
+    min-height: 25px;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .greeting-container {
+    min-height: 40px;
+    font-size: 36px;
+  }
+
+  .name {
+    font-size: 36px;
+    padding: 5px;
+  }
+
+  .quote, .author { font-size: 14px }
 }

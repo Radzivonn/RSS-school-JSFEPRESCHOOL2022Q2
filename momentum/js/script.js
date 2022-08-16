@@ -4,12 +4,12 @@ import getWeather from './modules/weather_widget.js';
 
 let UserName = document.querySelector('.name');
 
-const setLocalStorage = () => localStorage.setItem('name', UserName.value);
-const getLocalStorage = () => { if(localStorage.getItem('name')) UserName.value = localStorage.getItem('name') }
+const setLocalStorageUsername = () => localStorage.setItem('name', UserName.value);
+const getLocalStorageUsername = () => { if(localStorage.getItem('name')) UserName.value = localStorage.getItem('name') }
 
 showTime();
 getRandomNum(MIN, MAX);
 getWeather();
 
-window.addEventListener('beforeunload', setLocalStorage); // сохранить имя пользователя в local storage перед перезагрузкой или закрытием страницы
-window.addEventListener('load', getLocalStorage); // загрузить имя пользователя из local storage при загрузке страницы
+window.addEventListener('beforeunload', setLocalStorageUsername); // сохранить имя пользователя в local storage перед перезагрузкой или закрытием страницы
+window.addEventListener('load', getLocalStorageUsername); // загрузить имя пользователя из local storage при загрузке страницы

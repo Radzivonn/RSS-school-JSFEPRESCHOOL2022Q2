@@ -3,4 +3,12 @@ const city = document.querySelector('.city');
 
 const getRandomNum = (MIN, MAX) => Math.floor(Math.random() * (Math.floor(MAX) - Math.ceil(MIN) + 1)) + Math.ceil(MIN);
 
-export {MAX, MIN, city, getRandomNum};
+function ChangeSelectElement(id, valueToSelect)
+{    
+  let element = document.getElementById(id);
+  // console.log(element);
+  element.value = valueToSelect;
+  // console.log(element.value);
+}
+
+export {MAX, MIN, city, getRandomNum, ChangeSelectElement};

@@ -11,6 +11,7 @@ const progressContainer = document.querySelector('.progress-container');
 const volumeSlider = document.querySelector('.volume-slider');
 const volumeButton = document.querySelector('.volume-logo'); // volume OFF/ON
 let isPlay = false;
+let muteFlag = false;
 let playNum = 0; // number of audio track
 
 
@@ -67,9 +68,20 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * audio.duration;
 }
 
-const changeVolume = () => audio.volume = volumeSlider.valueAsNumber;
+const changeVolume = () => { if(muteFlag === false) audio.volume = volumeSlider.valueAsNumber }
 
-const toggleVolume = () => audio.volume > 0 ? audio.volume = 0 : changeVolume();
+const toggleVolume = () => {
+  if(audio.volume > 0 && muteFlag === false) {
+    muteFlag = true;
+    audio.volume = 0;
+    volumeButton.src = "assets/svg/mute-icon.ico";
+  }
+  else if(muteFlag === true) {
+    muteFlag = false;
+    changeVolume();
+    volumeButton.src = "assets/svg/volume-icon.ico";
+  }
+}
 
 
 audio.addEventListener('ended', playNextAudio);
