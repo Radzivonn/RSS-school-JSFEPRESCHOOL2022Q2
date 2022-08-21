@@ -3,8 +3,8 @@
 .greeting,
 .quotes__block,
 .weather,
-.player,
-.social-media {
+.player
+{
   opacity: 1;
   transition: all 0.8s ease 0s;
 }
@@ -13,3 +13,4 @@
   opacity: 0;
   visibility: hidden;
 }
+/* .social-media */

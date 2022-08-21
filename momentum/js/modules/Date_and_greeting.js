@@ -6,6 +6,8 @@ const currentDate = document.querySelector('.date');
 const WeekDays = translationsArr["WeekDays"][lang];
 const Months = translationsArr["Months"][lang];
 const greetingText = document.querySelector('.greeting');
+const enterNamePlaceholder = document.querySelector('.name');
+
 
 export function getTimeOfDay(isShowGreetingRequest) {
 	let date = new Date();
@@ -18,7 +20,10 @@ export function getTimeOfDay(isShowGreetingRequest) {
 	return TimesOfDay[Math.floor(date.getHours() / 6)].substring(5);
 }
 
-const showGreeting = () => greetingText.textContent = `${getTimeOfDay(true)}`;
+const showGreeting = () => {
+	greetingText.textContent = `${getTimeOfDay(true)}`;
+	enterNamePlaceholder.setAttribute("placeholder", translationsArr["namePlaceholder"][lang]);
+}
 
 export function showTime() {
 	let date = new Date(); // Data object
