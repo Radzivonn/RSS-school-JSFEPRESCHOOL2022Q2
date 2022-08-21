@@ -13,3 +13,5 @@ getWeather();
 
 window.addEventListener('beforeunload', setLocalStorageUsername); // сохранить имя пользователя в local storage перед перезагрузкой или закрытием страницы
 window.addEventListener('load', getLocalStorageUsername); // загрузить имя пользователя из local storage при загрузке страницы
+
+console.log(settingsState.IncludedBlocks);

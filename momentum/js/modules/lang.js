@@ -1,5 +1,3 @@
-import {city} from './General_module.js';
-
 const translationsArr = {
 
   "WeekDays": {      
@@ -17,10 +15,15 @@ const translationsArr = {
     "ru": ['Cпокойной ночи ', 'Доброе утро', 'Добрый день', 'Добрый вечер'],
   },
 
+	"namePlaceholder": {
+		"en": "[Enter name]",
+    "ru": "[Введите своё имя]",
+	},
+
   "Weather": {
     "weatherError": {
-      "en": `Error! city not found for ${city.value}!`,
-      "ru": `Ошибка! Город ${city.value} не найден!`,
+      "en": `Error! This city not found for !`,
+      "ru": `Ошибка! Такой город не найден!`,
     },
 
     "windSpeed": {
@@ -37,7 +40,41 @@ const translationsArr = {
   "URLlang": {
     "en": "en",
     "ru": "ru",
-  }
+  },
+
+	"settings": {
+		"chooseLanguageLabel": {
+			"en": "Choose your language",
+			"ru": "Выберите свой язык",
+		},
+
+		"chooseAPILabel": {
+			"en": "Choose how to get background images",
+			"ru": "Выберите способ получения фоновых изображений",
+		},
+
+		"tagForBG": {
+			"en": "enter a tag to search for a photo",
+			"ru":	"введите тег для поиска фото",
+		},
+
+		"WidgetsTitle": {
+			"en": "Widgets",
+			"ru": "Виджеты",
+		},
+
+		"WidgetsNames": {
+			"en": ['time', 'date', 'greeting', 'quote of the Day', 'weather forecast', 'audio player', 'social media'],
+			"ru": ['время', 'дата', 'приветствие', 'цитата дня', 'прогноз погоды', 'аудио плеер', 'ссылки'],
+		},
+
+		"SaveChangesButton": {
+			"en": "save changes",
+			"ru": "сохранить изменения",
+		}
+	}
+	// "en": 
+	// "ru": 
 
 }
 

@@ -1,4 +1,3 @@
-import {city} from './General_module.js';
 import {lang}  from "./ChangeLanguage.js";
 import translationsArr from "./lang.js";
 
@@ -10,9 +9,12 @@ const humidity = document.querySelector('.humidity');
 const weatherDescription = document.querySelector('.weather-description');
 const weatherError = document.querySelector('.weather-error');
 const weatherElements = [weatherIcon, temperature, wind, humidity, weatherDescription];
+export const city = document.querySelector('.city');
+city.value = settingsState.city;
 
 export default async function getWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${lang}&appid=${APPID}&units=metric`;
+	settingsState.city = city.value;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${settingsState.city}&lang=${lang}&appid=${APPID}&units=metric`;
   const res = await fetch(url);
   const data = await res.json();
   if (data.message === 'city not found') {
@@ -28,8 +30,9 @@ export default async function getWeather() {
     temperature.textContent = `${Math.round(data.main.temp)}°C`;
     wind.textContent = `${translationsArr["Weather"]["windSpeed"][lang]} ${Math.round(data.wind.speed)} m/s`;
     humidity.textContent = `${translationsArr["Weather"]["Humidity"][lang]} ${data.main.humidity}%`;
-    weatherDescription.textContent = data.weather[0].description;
-  }
+		weatherDescription.textContent = data.weather[0].description;
+	}
+
 }
 
-city.addEventListener('change', () => getWeather()); // отобразить погоду если поменялся город
+city.addEventListener('change', getWeather); // отобразить погоду если поменялся город

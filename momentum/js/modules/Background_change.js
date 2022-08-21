@@ -1,7 +1,5 @@
 import {getTimeOfDay} from './Date_and_greeting.js';
-import {getRandomNum, MAX, MIN} from './General_module.js';
-import settingsState from './settings.js';
-import {ChangeSelectElement} from './General_module.js';
+import {getRandomNum, MAX, MIN, ChangeSelectElement} from './General_module.js';
 
 export const body = document.querySelector('body');
 const slideNext = document.querySelector('.slide-next');
@@ -25,7 +23,7 @@ async function getLinkByUnsplashAPI() {
 
 async function getLinkByFlickrAPI() {
   const res = await fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=9890e6668e76db4fc54684a689e616f4&tags=${tagForBg}&extras=url_l&format=json&nojsoncallback=1`);
-  let data = await res.json();
+	let data = await res.json();
   return data.photos.photo;
 }
 
@@ -73,6 +71,15 @@ const getSlideNext = () => {
 	setBg();
 }
 
+const tagInputSubmit = (event) => {
+  event.preventDefault();
+	tagForBg = tagForm.querySelector('.tagInput').value;
+	tagForm.querySelector('.tagInput').value = '';
+	settingsState.tagForBG = tagForBg;
+	getNewphotosByFlickrAPI();
+}
+
+
 slidePrev.addEventListener('click', getSlidePrev);
 slideNext.addEventListener('click', getSlideNext);
 
@@ -80,10 +87,5 @@ window.addEventListener('load', () => ChangeSelectElement('source', settingsStat
 
 if (settingsState.photoSource !== 'Flickr API') setBg();
 
-tagForm.addEventListener('change', (event) => {
-  event.preventDefault();
-	tagForBg = tagForm.querySelector('.tagInput').value;
-	tagForm.querySelector('.tagInput').value = '';
-	settingsState.tagForBG = tagForBg;
-	getNewphotosByFlickrAPI();
-}); 
+tagForm.addEventListener('change', tagInputSubmit); 
+tagForm.addEventListener('submit', tagInputSubmit);
