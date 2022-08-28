@@ -1,0 +1,25 @@
+const brownCardsPathes = [
+	'./brown1.png',
+	'./brown2.png',
+	'./brown3.png',
+	'./brown4.png',
+	'./brown5.png',
+	'./brown6Tentacles.png',
+	'./brown7Tentacles.png',
+	'./brown8Tentacles.png',
+	'./brown9Tentacles.png',
+	'./brown10Tentacles.png',
+	'./brown11SF.png',
+	'./brown12SF.png',
+	'./brown13SF.png',
+	'./brown14SF.png',
+	'./brown15.png',
+	'./brown16.png',
+	'./brown17.png',
+	'./brown18.png',
+	'./brown19.png',
+	'./brown20.png',
+	'./brown21SF.png',
+];
+
+export default brownCardsPathes
