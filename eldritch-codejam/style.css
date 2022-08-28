@@ -22,14 +22,14 @@ body {
 
 .buttons__container {
 	width: 160px;
-	height: 30vh;
+	height: 20vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin: 40px auto 0;
+	margin: 40px auto 125px;
 }
 
-.dificulty__button {
+.dificulty__button, .shuffle__button {
 	width: 100%;
 	height: 40px;
 	background-color: rgb(24, 24, 24);
@@ -40,11 +40,16 @@ body {
 	color: rgb(190, 0, 0);
 }	
 
-.ancient__card, .dificulty__button {
+.shuffle__button {
+	width: 160px;
+	margin-left: 110px
+}
+
+.ancient__card, .dificulty__button, .shuffle__button {
 	transition: all 0.4s ease 0s;
 }
 
-.dificulty__button:hover {
+.dificulty__button:hover, .shuffle__button:hover {
 	color: red;
 	border: solid 2px red;
 }
@@ -54,7 +59,7 @@ body {
 	width: 100%;
 	height: 30vh;
 	display: flex;
-	gap: 45%;
+	gap: 20%;
 }
 
 .deckTracker {
@@ -72,9 +77,13 @@ body {
 	flex-wrap: nowrap;
 }
 
+.stage1, .stage2, .stage3 {
+	white-space: nowrap;
+}
+
 .deckTracker li p {
 	white-space: nowrap;
-	margin-right: 20px
+	margin-right: 20px;
 }
 
 p, 
@@ -123,6 +132,7 @@ p,
 
 .ancient__card:hover,
 .dificulty__button:hover,
+.shuffle__button:hover,
 .cardBG:hover {
 	cursor: pointer;
 }
