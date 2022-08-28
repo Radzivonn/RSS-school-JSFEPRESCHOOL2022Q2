@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	height: 100vh;
+	background: url('assets/home.png') center top no-repeat fixed;
+	font-family: 'League Gothic', sans-serif;
+	padding: 20px;
+}
+
+
+.ancients {
+	width: 60vw;
+	height: 30vh;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.buttons__container {
+	width: 160px;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 40px auto 0;
+}
+
+.dificulty__button {
+	width: 100%;
+	height: 40px;
+	background-color: rgb(24, 24, 24);
+	border-radius: 5px;
+	border: solid 2px rgb(190, 0, 0);
+	font-family: 'Bebas Neue', cursive;
+	font-size: 25px;
+	color: rgb(190, 0, 0);
+}	
+
+.ancient__card, .dificulty__button {
+	transition: all 0.4s ease 0s;
+}
+
+.dificulty__button:hover {
+	color: red;
+	border: solid 2px red;
+}
+
+
+.deckState {
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	gap: 45%;
+}
+
+.deckTracker {
+	max-width: 20vw;
+	max-height: 20vh;
+	margin: 70px 0 0 50px;
+	list-style: none;
+	color: white;
+	font-size: 26px;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.deckTracker li {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.deckTracker li p {
+	white-space: nowrap;
+	margin-right: 20px
+}
+
+p, 
+.stageState, 
+.stageState li {
+	display: inline;
+}
+
+
+.stageState{
+	display: flex;
+	gap: 15px;
+}
+
+.stageState li {
+	width: 40px;
+}
+
+
+.deckSlide {
+	display: flex;
+	gap: 25%;
+	width: 30vw;
+	height: 30vh;
+
+}
+
+.cardBG {
+	width: 150px;
+	height: 210px;
+	border-radius: 10px;
+}
+
+.cardBG, .ancient__card {
+	transition: all 0.5s ease 0s;
+	border-radius: 10px;
+}
+
+.ancient__card:hover, .cardBG:hover {
+	transform: scale(1.1);
+}
+
+.cardBG:hover {
+	transform: scale(1.05);
+}
+
+.ancient__card:hover,
+.dificulty__button:hover,
+.cardBG:hover {
+	cursor: pointer;
+}
